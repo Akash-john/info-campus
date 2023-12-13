@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    let book = ["Html","CSS","Bootstrap", "Javascript", "React", "Node.js","PHP"]
+
+    const one = ()=>{
+        for(let i=0; i<book.length;i++){
+            console.log(book[i])
+        }
+
+        console.log("--For Loop End-- \n")
+    }
+
+    const two = () =>{
+        let i = 0;
+        while(i<book.length){
+            console.log(book[i])
+            i++;
+        }
+
+        console.log("--While Loop End--\n")
+    }
+
+    const three = () =>{
+
+        //callback function takes two args arr, index
+        //map function call itself total how many elements in the array
+        book.map(function(bookName,index){
+            console.log(bookName)
+        })
+
+        console.log("--Map Function End--\n")
+    }
+
+    const four = () =>{
+
+        //
+        //
+    
+        book.forEach(function(bookName, index){
+            console.log(bookName)
+        })
+
+        console.log("--forEach Function End--\n")
+    }
+
+    const five = () =>{
+
+        //
+        //
+        book.filter((arr, idx)=>{
+            console.log(arr)
+        })
+
+        console.log("--filter Function End--\n")
+
+    }
+
+   </script>
+</head>
+<body>
+    <h1>Javascript Single Dimensional Array</h1>
+    <p> Read Array using For Loop</p> :<button onclick="one()">For loop Button</button>
+    <p>Read Array using While loop()</p>:<button onclick="two()">While loop Button</button>
+    <p>Read  Array using map()</p>:<button onclick="three()">Map  Button</button>
+    <p>Read  Array using forEach()</p>:<button onclick="four()">forEach  Button</button>
+    <p>Read Array using filter</p>:<button onclick="five()">filter  Button</button>
+</body>
+</html>

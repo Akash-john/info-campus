@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+        //First Product Obj
+        const one = () =>{
+            let apple = {
+                name:"Apple",
+                price:300,
+                seller:"Ganesh",
+            };
+            console.log("--About Product--")
+            console.log("Name is : " + apple.name)
+            console.log("price is : " + apple.price)
+            console.log("sold by : " + apple.seller)
+
+        }
+
+        //second Product Obj
+
+        const two = () =>{
+            let laptop = {
+                name:"Asus Gaming Machine ",
+                price:60000,
+                seller:"Asus"
+            }
+            console.log("--About Product--")
+            console.log("Name is : " + laptop.name)
+            console.log("price is : " + laptop.price)
+            console.log("sold by : " + laptop.seller)
+        }
+
+        //map, forEach,Filter methods used  to iterate the array of objects...
+        //those are Listing Data
+
+
+        const three = () =>{
+            let bookList =[
+                {
+                    name:"html",
+                    price:300
+                },
+                {
+                    name:"css",
+                    price:400
+                },
+                {
+                    name:"node",
+                    price:500
+                },
+                {
+                    name:"js",
+                    price:500
+                },
+            ]
+
+            bookList.map((book,index)=>{
+                console.log(book.name + ' ' + book.price)
+                console.log("...........................................................")
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1>Object in Javascript</h1>
+    <p>How to read Data from an object...</p>
+
+    <button onclick="one()">Apple Details</button>
+    <button onclick="two()">Laptop Details</button>
+    <button onclick="three()">Book Details</button>
+
+</body>
+</html>
