@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //give Confirmation to the user
+            const one = () =>{
+                alert("Hi, Your Email is Blocked...!")
+            }
+
+
+            //ask confirmation to the user
+            const two = () =>{
+               let a = confirm("Are you Sure...?")
+               alert(a)
+            }
+
+            //ask input from the user..
+
+            const three = () =>{
+                let a = prompt("Enter Your Email Id");
+                alert("The Download link sent to : " + a)
+            }
+
+            const four = () =>{
+
+                let start = prompt("Enter the Starting Number");
+                let end = prompt ("Enter Ending Number")
+
+                for( let i = start; i<=end; i++)
+                {
+                    console.log("The For Say: " + i);
+                }
+
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h1> Type of popup window in javascript</h1>
+        <p>alert() - it used to give confirmation message to user with "OK" button</p>
+        <button onclick="one()">Click For Alert</button>
+
+        <p>confirm() - It is used to ask confirmation from the user</p>
+        <p>we have to use Alert()</p>
+        <p>The "OK" returns true, "Cancel" return false</p>
+        <button onclick="two()">Confirm - Delete Account</button>
+
+        <p>prompt() - It use to ask input from user</p>
+        <button onclick="three()">prompt - Download File</button>
+
+        <button onclick="four()">Print Number List</button>
+
+
+    </body>
+</html>
