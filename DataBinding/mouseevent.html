@@ -11,8 +11,45 @@
     <body>
         <h1>Javascript Mouse Event</h1>
         <!--Mouse Events in Javascripts-->
+
+        <!--
+            What is Event in javascript?
+           Type User Interacts with UI mouse click, keyboard Events....
+            //with the help of mouse, KeyBoard...
+
+            //it can follow the activity of the user tooo....
+        -->
+        <p>Events in Javascript ?</p>
+        <p>The Type of User Interaction</p>
+
+
         <button onclick="one()"> 1 Click</button>
         <button ondblclick="one()">2 Click</button>
+        <!--onmousedown Right | Left button in mouse-->
+        <button onmousedown="one()">Mouse Down - Left | Right Click</button>
+
+        <!--when cursor is enter in to the button area it fires the onmouseenter event-->
+        <button onmouseenter="one()">Enter Mouse</button>
+        <!--onmouseout when mouse leaves the button area
+         
+            come in and move out
+        -->
+        <button onmouseout="one()">Mouse Out - Come in & Move Out</button>
+
+        <button onmousemove="one()">Mouse Move - Move Pointer on Button</button>
+
+
+        <hr color="red" size="10">
+ 
+<!--onchange event-->
+
+            on Change:<select onchange="one()">
+                <option>Choose</option>
+                <option>Bangalore</option>
+                <option>Pune</option>
+                <option>Chennai</option>
+            
+            </select>
     </body>
 
 </html>

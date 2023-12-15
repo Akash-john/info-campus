@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = (a) => {
+              console.log(a)
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Keyboard Events in Javascript</h1>
+        <!--onekeypress gives the old value always & backspace is not considered & event will not fire-->
+        <p>On Key Press :<input type="text" value="MANGO" onkeypress="one(value)"/></p>
+
+        <!--onekeydown gives the old value always and backspace is considered-->
+
+        <p>On Key Down :<input type="text" value="MANGO" onkeydown="one(value)"/></p>
+
+        <!--onekeyup gives the current value always and backspace is considered-->
+        <!--Most used method is onekeyup-->
+        <p>On Key Up :<input type="text" value="MANGO" onkeyup="one(value)"/></p>
+        <!--Onfocus  when cursor moves inside the input field it takes the current value-->
+        <p>On Focus :<input type="text" value="ORANGE" onfocus="one(value)"/></p>
+
+        <!--onblur event get fired once focused outside of the input-->
+        <p>On Blur :<input type="text" value="GRAPES" onblur="one(value)"/></p>
+
+
+
+        
+
+    </body>
+</html>
