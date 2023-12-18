@@ -1,0 +1,53 @@
+    HTML - Hyper text markup Language
+            as a developer what i should know ?
+        ** It has  collection of pre-defined tags.
+        ** The html tags used to create basic structure of webpage i.e(skeleton of the webpage)
+        ** The html tags used to take input from user and display output to user via web browser.
+        ** The html tags has limited property/attribute and value , due to this limitations CSS3 is required to i.e(layout as per the device) 
+        
+
+        Responsive Webpage = HTML(tags) + css(property & value)
+
+        =>  Tags ?
+        
+        ** structure of the tags...
+
+        <> open tags, start
+        </> close tags, end
+
+        =>Type of tags in html?
+
+            1.input tags. many input tags are there.
+
+            2.output tags. many outupt tags are there.
+
+
+            => structure of html tags?
+            1. dependent tag - Those tags, that open and close separate
+                    example:
+                            <html> </html>
+                            <body> </body>
+                            <xyz> </xyz>
+
+            2. independent tag / self-close tags:
+                    example:
+                            <br> it is wrong, <br/> 100% valid
+                            <hr>  ""   . , <hr/>
+
+
+        
+        => The Behavior of html tags:
+
+                        1.Block level tag:
+                                       => it print the statement in newline.
+                        2.Inline tag
+                                       => it print the statement in same line -(side by side)
+
+
+
+        Note - Using CSS3
+        1. inline tags => convert to block level tag.
+        2. block level tag => convert to => inline tag.
+
+
+    That is called responsive design
