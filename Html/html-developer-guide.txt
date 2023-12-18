@@ -50,7 +50,7 @@
         2. block level tag => convert to => inline tag.
 
 
-    That is called responsive design
+         That is called responsive design
 =====================================================================================
 1.HTML ?
 
@@ -83,3 +83,50 @@
                         ->content with suitable HTML tags;
                         
 ===================================================================================
+
+        =>h1 to h6 - It is called heading tag.(block level elements)
+                        **It used to create headline of current page.
+                        h1 tag - will be require one time...in each page or each section.
+
+===================================================================================
+
+        => p - tag - It is called Paragraph Tag use when text length is more than one line.
+        =>b, u, i, strong, em, - use these tags if text length is less than 1 line.
+
+========================================================================================================
+
+        How to link the pages in HTML?
+                => <a href = "" title ="" target="">Text To Click</a>
+                => a - tag name
+                => href - it is attribute , use to set path for next page.
+                =>title - It is for digital marketing, website promotion
+                => target - It is used to set target / location where the next file should open 
+                                as - newtab, blank tab, popup window etc..
+
+                =>page3.html
+                =>page4.html
+                
+=========================================================================================
+
+        => Types of list in html?
+
+                1. Order List - OL - page5.html (every items with numbered order) 5 types,1,a,A,I, i
+                2. Un-ordered List -UL
+                3. DL - Definition List
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
