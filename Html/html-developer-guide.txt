@@ -17,9 +17,9 @@
 
         =>Type of tags in html?
 
-            1.input tags. many input tags are there.
+            1.input tags. many input tags are there.(It is used to collect input from user)
 
-            2.output tags. many outupt tags are there.
+            2.output tags. many outupt tags are there.(It is used to display output to user)
 
 
             => structure of html tags?
@@ -51,3 +51,35 @@
 
 
     That is called responsive design
+=====================================================================================
+1.HTML ?
+
+        Tags?
+                Type of tags?
+                1.input tag - it collect input from user
+                2.output tag - it use to display o/p to user
+                3.dependant tag - it has open and close tags individually. 
+                4.independant tag - self closing tag <br/> 
+                5.block-level tag - those tags, that print statement in new line.
+                6.inline tag - those tags, that print a statement in same line as (side by side)
+
+============================================================================================
+
+        => what are valid extension of html file?
+                .html - good for digital marketing - SEO(search engine optimization)
+                .htm
+===================================================================================
+
+        => Structure of HTML Document?
+
+        access object model - represents How easily the content will be accessible inside the page.
+        ->html start to end is called Document
+        ->html document 
+                => head
+                        Google analytics or research about website
+                        1.Digital Marketing & Analytics about page
+                        2.Library section(css, js, other lib)
+                => body
+                        ->content with suitable HTML tags;
+                        
+===================================================================================
