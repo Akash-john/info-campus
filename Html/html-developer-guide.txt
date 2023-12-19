@@ -106,16 +106,54 @@
                 =>page3.html
                 =>page4.html
                 
-=========================================================================================
+===================================================================================================
 
         => Types of list in html?
 
-                1. Order List - OL - page5.html (every items with numbered order) 5 types,1,a,A,I, i
-                2. Un-ordered List -UL
-                3. DL - Definition List
+                1. Order List - OL - page5.html (every items with numbered order)
 
+                        =>Types of ordered List
+                                type="1" default
+                                type="A"
+                                type = "a"
+                                type = "I"
+                                type = "i"
 
+                2. Un-ordered List -UL   page 6.html
+                        type="disc"
+                        type = "square"
+                        type = "circle"
+                        type = "none"
 
+                3. DL - Definition List  dl.html
+                        dt - definition title - used to create headline of content
+                        dd - definition details --used to display the details of content
+======================================================================================================
+
+                =>Tables in Html:
+                        =>Structure of table
+
+                        Html4 & Html5 side
+
+                        1.Method-1 :
+                                =>table 
+                                        ->caption - it introduces about the table
+                                        ->tr(table-row)
+                                                =>th - (table heading)
+                                                =>td - (table data)
+
+                        2.Method-2 :
+                                =>table 
+                                        =>thead - it covers upper part of the table
+                                                =>tr
+                                                        => th
+                                        =>tbody - it covers middle part of the table
+                                                =>tr
+                                                        =>td
+                                        =>tfoot - it covers bottom part of the table
+                                                =>tr 
+                                                        =>th
+===========================================================================================================
 
 
 
