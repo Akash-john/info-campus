@@ -153,6 +153,25 @@
                                         =>tfoot - it covers bottom part of the table
                                                 =>tr 
                                                         =>th
+
+                        List of property in table tr, th , td
+                                *align - left, center, right
+                                *border - ite applies border to the table 
+                                *cellpadding - spacing inside the table 
+                                *cellspacing - spacing outside of the th and td
+                                *bordercolor - it apply color on border
+
+                        page8.html
+
+                        height
+                        width
+                        background
+                        colspan - it used to combine the space of 2 or more th, td -merge space the  column left to right 
+                        rowspan - it used to combine the space of 2 or more tr
+
+                        page9.html 
+
+
 ===========================================================================================================
 
 
