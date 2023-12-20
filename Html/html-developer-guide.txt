@@ -167,7 +167,7 @@
                         width
                         background
                         colspan - it used to combine the space of 2 or more th, td -merge space the  column left to right 
-                        rowspan - it used to combine the space of 2 or more tr
+                        rowspan - it used to combine the space of 2 or more tr,
 
                         page9.html 
 
