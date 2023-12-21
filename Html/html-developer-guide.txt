@@ -1,0 +1,189 @@
+    HTML - Hyper text markup Language
+            as a developer what i should know ?
+        ** It has  collection of pre-defined tags.
+        ** The html tags used to create basic structure of webpage i.e(skeleton of the webpage)
+        ** The html tags used to take input from user and display output to user via web browser.
+        ** The html tags has limited property/attribute and value , due to this limitations CSS3 is required to i.e(layout as per the device) 
+        
+
+        Responsive Webpage = HTML(tags) + css(property & value)
+
+        =>  Tags ?
+        
+        ** structure of the tags...
+
+        <> open tags, start
+        </> close tags, end
+
+        =>Type of tags in html?
+
+            1.input tags. many input tags are there.(It is used to collect input from user)
+
+            2.output tags. many outupt tags are there.(It is used to display output to user)
+
+
+            => structure of html tags?
+            1. dependent tag - Those tags, that open and close separate
+                    example:
+                            <html> </html>
+                            <body> </body>
+                            <xyz> </xyz>
+
+            2. independent tag / self-close tags:
+                    example:
+                            <br> it is wrong, <br/> 100% valid
+                            <hr>  ""   . , <hr/>
+
+
+        
+        => The Behavior of html tags:
+
+                        1.Block level tag:
+                                       => it print the statement in newline.
+                        2.Inline tag
+                                       => it print the statement in same line -(side by side)
+
+
+
+        Note - Using CSS3
+        1. inline tags => convert to block level tag.
+        2. block level tag => convert to => inline tag.
+
+
+         That is called responsive design
+=====================================================================================
+1.HTML ?
+
+        Tags?
+                Type of tags?
+                1.input tag - it collect input from user
+                2.output tag - it use to display o/p to user
+                3.dependant tag - it has open and close tags individually. 
+                4.independant tag - self closing tag <br/> 
+                5.block-level tag - those tags, that print statement in new line.
+                6.inline tag - those tags, that print a statement in same line as (side by side)
+
+============================================================================================
+
+        => what are valid extension of html file?
+                .html - good for digital marketing - SEO(search engine optimization)
+                .htm
+===================================================================================
+
+        => Structure of HTML Document?
+
+        access object model - represents How easily the content will be accessible inside the page.
+        ->html start to end is called Document
+        ->html document 
+                => head
+                        Google analytics or research about website
+                        1.Digital Marketing & Analytics about page
+                        2.Library section(css, js, other lib)
+                => body
+                        ->content with suitable HTML tags;
+                        
+===================================================================================
+
+        =>h1 to h6 - It is called heading tag.(block level elements)
+                        **It used to create headline of current page.
+                        h1 tag - will be require one time...in each page or each section.
+
+===================================================================================
+
+        => p - tag - It is called Paragraph Tag use when text length is more than one line.
+        =>b, u, i, strong, em, - use these tags if text length is less than 1 line.
+
+========================================================================================================
+
+        How to link the pages in HTML?
+                => <a href = "" title ="" target="">Text To Click</a>
+                => a - tag name
+                => href - it is attribute , use to set path for next page.
+                =>title - It is for digital marketing, website promotion
+                => target - It is used to set target / location where the next file should open 
+                                as - newtab, blank tab, popup window etc..
+
+                =>page3.html
+                =>page4.html
+                
+===================================================================================================
+
+        => Types of list in html?
+
+                1. Order List - OL - page5.html (every items with numbered order)
+
+                        =>Types of ordered List
+                                type="1" default
+                                type="A"
+                                type = "a"
+                                type = "I"
+                                type = "i"
+
+                2. Un-ordered List -UL   page 6.html
+                        type="disc"
+                        type = "square"
+                        type = "circle"
+                        type = "none"
+
+                3. DL - Definition List  dl.html
+                        dt - definition title - used to create headline of content
+                        dd - definition details --used to display the details of content
+======================================================================================================
+
+                =>Tables in Html:
+                        =>Structure of table
+
+                        Html4 & Html5 side
+
+                        1.Method-1 :
+                                =>table 
+                                        ->caption - it introduces about the table
+                                        ->tr(table-row)
+                                                =>th - (table heading)
+                                                =>td - (table data)
+
+                        2.Method-2 :
+                                =>table 
+                                        =>thead - it covers upper part of the table
+                                                =>tr
+                                                        => th
+                                        =>tbody - it covers middle part of the table
+                                                =>tr
+                                                        =>td
+                                        =>tfoot - it covers bottom part of the table
+                                                =>tr 
+                                                        =>th
+
+                        List of property in table tr, th , td
+                                *align - left, center, right
+                                *border - ite applies border to the table 
+                                *cellpadding - spacing inside the table 
+                                *cellspacing - spacing outside of the th and td
+                                *bordercolor - it apply color on border
+
+                        page8.html
+
+                        height
+                        width
+                        background
+                        colspan - it used to combine the space of 2 or more th, td -merge space the  column left to right 
+                        rowspan - it used to combine the space of 2 or more tr,
+
+                        page9.html 
+
+
+===========================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+

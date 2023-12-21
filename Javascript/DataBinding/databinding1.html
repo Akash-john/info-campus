@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            let myData = "<h1> Welcome to javascript</h1> It is working well...";
+            let myData1 = "Welcome To Javascript. It is Working Well..."
+            
+            
+
+            //changes or rewrite all the data from the document is .write
+            const one = () =>{
+                document.write(myData)
+            }
+
+            //this is for text data communication
+            const two = () =>{
+                document.getElementById("output-tag").innerText = myData1; 
+                //$("#xyz").text(myData2) => jquery
+                //react ==><div> {myData1} </div>
+                //angular ==> <div>{{myData2}}</div>
+            }
+
+            
+
+            //this is for text data + Html data communication.
+            const three = () =>{
+                document.getElementById("output-tag").innerHTML = myData;//html(mydata)
+            }
+        </script>
+        
+    </head>
+    <body>
+        <h1>Javascript .innerText and .innerHTML Example</h1>
+        
+        <button onclick="one()">Document.Write</button>
+        <button onclick="two()">innerText </button>
+        <button onclick="three()">innerHTML </button>
+        <br/><br/>
+        
+        <div id="output-tag">No, Data yet...?</div>
+
+        <script>
+
+        </script>
+
+    </body>
+</html>

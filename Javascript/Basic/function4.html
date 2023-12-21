@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+          
+          //can be able to pass one or more params...
+           const one = (name) => console.log("hi " + name + ", How are you today ? ")
+
+           //optional fat arrow params...
+
+           const one1 = (name,age = null) => console.log("hi " + name + ", How are you today ? ")
+
+           //cannot pass more params...
+           const two = city => console.log("Hi, You belongs to :  " + city)
+
+           
+
+           one("john Doe")
+           one("info Campus ")
+           two("Bangalore")
+           
+
+        </script>
+    </head>
+    <body>
+        <h1> Functions in Javascript </h1>
+        <p>fat Arrow inline function.</p>
+        <p>with params & without params </p>
+       
+    </body>
+</html>

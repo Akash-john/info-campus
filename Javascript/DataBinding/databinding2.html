@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //.value to process the input from the user from the html to javascript....
+            const one = () =>{
+                let a = document.getElementById("fname").value;
+                document.getElementById("xyz").innerText = a;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Javascript .value and innerText</h1>
+
+        <p>
+            Enter Your Name : <input  type="text" id="fname" value="sumi"/>
+            <button onclick="one()">Go</button>
+        </p>
+
+        <h1 id="xyz"></h1>
+    </body>
+</html>

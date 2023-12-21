@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> colspan & rowspan in table</title>
+    </head>
+
+    <body>
+            <table align="center" cellpadding="10" border="1">
+                <caption>
+                    <h1>Table rowspan & colspan</h1>
+                </caption>
+
+                <tr>
+                    <th>Sl NO</th>
+                    <th>Employee Name</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>City</th>
+                    <th>Company Name</th>
+                    <th>Date of Joining</th>
+                </tr>
+
+                <tr>
+                    <td> 01</td>
+                    <td>Suresh Kumar</td>
+                    <td>Marketing</td>
+                    <td>Rs.25000</td>
+                    <td>Bangalore</td>
+                    <td rowspan="4">GEEKY ANTS</td>
+                    <td rowspan="2">23-02-2024</td>
+                </tr>
+
+                <tr>
+                    <td>02</td>
+                    <td>Alex</td>
+                    <td>HR</td>
+                    <td>Rs.21000</td>
+                    <td rowspan="3">Mumbai</td>
+                </tr>
+
+                <tr>
+                    <td>03</td>
+                    <td>Akash</td>
+                    <td>Software Engineer</td>
+                    <td>Rs.50000</td>
+                    <td rowspan="2">23-03-2024</td>
+                </tr>
+
+                <tr>
+                    <td>04</td>
+                    <td>Anil Kumar</td>
+                    <td> Manager</td>
+                    <td> Rs.35000</td>
+                </tr>
+
+                <tr>
+                    <td>05</td>
+                    <td>Aswinth</td>
+                    <td>SEO Analyst</td>
+                    <td>Rs.15000</td>
+                    <td>Pune</td>
+                    <td>Cybertech</td>
+                    <td>20-07-2020</td>
+                </tr>
+
+                <tr>
+                    <td>06</td>
+                    <td>Mohit Kumar</td>
+                    <td>Developer</td>
+                    <td colspan="2">Rs.34000</td>
+
+                    <td>Infocampus</td>
+                    <td>10-11-2020</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>Anuj Kumar</td>
+                    <td colspan="5">FreeLancer</td>
+                </tr>
+            </table>
+        
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+             const one = () =>{
+                let user = [
+                    {
+                        city:"Bangalore",
+                        customer:['Arasu', "Akash", "Aswinth", "Ramesh", "Sumithra"]
+                    },
+                    {
+                        city:"Tamilnadu",
+                        customer:['Santhosh', "Sunil"]
+                    },
+                    {
+                        city:"Kerala",
+                        customer:['Elisha', "Moses"]
+                    },
+
+                    {
+                        city:"Mumbai",
+                        customer:['John', "David", "Jacob"]
+                    },
+                ];
+                        //Iterate through Array of Objects with Map Function is very easy to listing the Products.
+
+                        //map inside of map function is 
+                    user.map((userInfo,idx)=>{
+                       console.log(idx + "." + userInfo.city + " #"+ userInfo.customer.length )
+                    //    console.log(userInfo.customer.length)
+                       userInfo.customer.map((name, idx) =>{
+                        console.log('\t' + name)
+                       })
+                    })
+             }
+        </script>
+    </head>
+    <body>
+        <h1>Nested Array in Javascript</h1>
+        <p>An Array inside Array is Called nested Array</p>
+        <button onclick="one()"> Print Customer </button>
+    </body>
+</html>
