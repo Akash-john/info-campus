@@ -105,6 +105,18 @@
 
                 =>page3.html
                 =>page4.html
+
+                =>Types of target in ?
+                1._self  = it opens next page in same tab. it is default target
+                2._new = it opens next page in new tab but only at 1st click.
+                3._blank = it opens  next page in new tab every time user clicks it.
+
+                =>product.html
+                =>details.html
+
+                4._child - in javascript
+                5._parent - in javascript
+                6.use-define - in javascript
                 
 ===================================================================================================
 
@@ -170,11 +182,15 @@
                         rowspan - it used to combine the space of 2 or more tr,
 
                         page9.html 
-
+                        page10.html
 
 ===========================================================================================================
 
-
+                        home.html
+                        about.html
+                        contact.html
+                        service.html
+                        login.html
 
 
 
