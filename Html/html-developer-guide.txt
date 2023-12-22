@@ -192,8 +192,48 @@
                         service.html
                         login.html
 
+=====================================================================================
 
+        List of Html Input tags
+        =>text
+        =>number
+        =>email
+        =>password
+        =>file
+        =>date
+        =>datetime-local
+        =>calender
+        =>textarea
+        =>checkbox
+        =>radio button
+        =>select
+        =>button
+                =>submit
+                =>reset
+                =>button
+=====================================================
+properties or attribute in the Input Tags
 
+        **placeholder - It is for user input guidance,as what type of value 
+                        the user should Enter.
+
+        **size - It is used to set width of text, email , password type input field
+
+        **maxlength - It is used to user input limit in the field like How many
+                        characters should be the maximum input in text fields
+                        type:text, email, password, textarea
+
+        **value - It is used to display default value in input fields
+
+        **readonly - it used to change input fields as read only. do not allow
+                        to enter any thing in the text field.
+
+        **disabled- It used to lock the input fields.
+
+        **required- it gives the popup message like must need
+
+        **rows - It is used to set the height of text area
+        ** cols - It is used to set the width of text area
 
 
 
