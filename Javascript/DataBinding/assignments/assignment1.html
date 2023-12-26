@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .flex-container{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+      .container{
+           width: 100%;
+    
+        }
+
+
+    </style>
+    <script>
+
+        let allItems=["Hello"]
+        
+        const getItem= () =>{
+            let data="";
+            allItems.map((itemName,Index) =>{
+                data += `<p>${itemName} - ${itemName.length}`
+            })
+            
+            document.getElementById("data-container").innerHTML = data;
+        }
+
+        const save = () => {
+            let newProduct = document.getElementById("data").value;
+            allItems.push(newProduct)
+            getItem();
+            console.log("button is working...")
+        }
+
+
+        let allItemsTwo = ["Helloo world"]
+        const getItemTwo = () => {
+            let data = "";
+            allItemsTwo.map((itemName, itemIdx)=>{
+                data += `
+                <div class="flex-container">
+                    <div class="contianer"> 
+                    <p>${itemIdx}<p><br/>
+                    <p> ${itemName} </p><br/>
+                    <p> ${itemName.length}<br/>
+                  </div>
+                <div>
+                        `
+                
+
+            })
+
+            document.getElementById("data-container-2").innerHTML = data;
+
+
+        }
+
+        const saveTwo=()=>{
+          let newProduct=  document.getElementById("data1").value;
+          allItemsTwo.push(newProduct)
+          document.getElementById('data1').value=" "
+          getItemTwo();
+        }
+
+    </script>
+</head>
+
+
+<body onload="getItem()">
+    <header>
+            <caption><h3>Assignment 1</h3></caption>
+            <input type="text" id="data" value="">
+            <button onclick="save()">Save</button>
+
+
+    </header>
+
+    <section id="data-container">
+            
+    </section>
+
+        <center>
+            
+            <header>
+                <caption><h3>Assignment 2</h3></caption>
+                <input type="text" id="data1" value="">
+                <button onclick="saveTwo()"> save</button>
+            </header>
+               <section id="data-container-2">
+
+                </section>
+        </center>
+
+
+</body>
+</html>
