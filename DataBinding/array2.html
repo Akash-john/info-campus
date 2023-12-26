@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array2</title>
+
+    <script>
+        let bookldetails = {bname:"HTML Basic", price:500, author:"Ganesh"}
+        
+        let booklist = [
+
+                         {bname:"HTML Basic", price:500, author:"Ganesh"},
+                         {bname:"CSS3 Basic", price:800, author:"Ramesh"},
+                         {bname:"Node Basic", price:700, author:"Ganesh"}
+
+                     ]
+
+        const getBook = () =>{
+            let data = "";
+
+            booklist.map((book, idx)=>{
+             data  += "<tr>"
+            data += "<td>" + idx + "</td>"
+            data += "<td>" + book.bname + "</td>"
+            data += "<td>" + book.price + "</td>"
+            data += "<td>" + book.author + "</td>"
+            data += "<td><button onclick='delbook(" + idx + ")'>Delete </button> </td>";
+            data += "</tr>"
+            })
+
+       
+            document.getElementById("container").innerHTML = data;
+          
+        }
+
+        const delbook= (index) =>{
+            alert(index);
+            booklist.splice(index,1)
+            getBook();//reload the list
+        }
+
+
+        const save = () =>{
+             let name = document.getElementById("bookname").value;
+             let price = document.getElementById("bookprice").value;
+             let author = document.getElementById("bookauthor").value;
+
+            
+          let newBook=  {bname:name, price:price, author:author}
+
+          booklist = booklist.concat(newBook) //add new element at the end of an Array
+          getBook(); //reload the list
+
+          document.getElementById("bookname").value=""
+          document.getElementById("bookprice").value=""
+          document.getElementById("bookauthor").value=""
+
+        }
+    </script>
+</head>
+<body onload="getBook()">
+        <h1 align="center"> Array of Objects. Add, List, Delete</h1>
+    <table align="left" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Enter Book Name</th>
+            <td><input type="text" name="" id="bookname" value=""></td>
+        </tr>
+
+        <tr>
+            <th>Enter Book Price</th>
+            <td><input type="text" name="" id="bookprice"></td>
+        </tr>
+
+        
+        <tr> 
+            <th>Enter Book Author</th>
+            <th><input type="text" name="" id="bookauthor"/></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">
+                <button onclick="save()">save</button>
+            </th>
+        </tr>
+        
+        
+    </table>
+
+        <table align="right" cellpadding="10" cellspacing="0" border="1">
+            <thead>
+                <tr>
+                    <th>SL No</th>
+                    <th>Book Name</th>
+                    <th>Price</th>
+                    <th>Author</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="container"></tbody>
+
+        </table>
+</body>
+</html>
