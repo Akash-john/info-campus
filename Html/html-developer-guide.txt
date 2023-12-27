@@ -233,7 +233,65 @@ properties or attribute in the Input Tags
         **required- it gives the popup message like must need
 
         **rows - It is used to set the height of text area
-        ** cols - It is used to set the width of text area
+        **cols - It is used to set the width of text area
+        **name = It is used to create Container, that will hold the value given by user.
+        **form - It is Parent Container of all the input tags.
+                
+                
+                
+                actions -
+                          * It used to set path/url of backend language Where the form data should get submitted.
+
+                method -  * It define the type of communication.
+
+                            (i)get - it send form data to backend via url and the value will be fully visible.
+                                     if values are visible then it represents unsecure communication.
+
+                            (ii)post - it sends data to backend in hidden and encoded form.
+
+                                     - it present fully secure communication
+
+                enctype -  It is used to encode a file while uploading. 
+                            -without enctype file will not get permission to get upload;
+
+
+======================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
