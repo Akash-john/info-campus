@@ -1,0 +1,50 @@
+CSS - Cascading Style Sheet.
+    It has collections of property and values. That use to change look and feel of html.(Layout, style)
+
+HTML - Hyper Text Markup Language
+    It has collection of pre-defined tags.
+
+Responsive Webpage = HTML(tags) + CSS(property & values)
+
+=>Type of CSS?
+ 
+        1.Inline CSS
+        2.Internal CSS
+        3.External CSS
+        4.import CSS
+
+
+        =>Syntax in inline css ?
+            <tagname style="property:value1; property2:value2"></tagname>
+        
+            ====================================================================
+        example:1     <p style="height:200px; background:red; width=300px"></p>
+
+
+
+================CSS Property & Values ====
+        
+        height = 3 types
+        width  = 4 types
+        background = 9 types
+        float - it converts from block level tag to inline tag.
+                float:left - it print from left to right
+                float:right - it print from right to left
+        margin - it used to apply space outside of tag.
+                margin:auto; - it print in center of area.
+                margin:30px; - it apply 30px gap from top, right, left ,bottom.
+                margin-top:20px;
+                margin-left:30px;
+                margin-bottom:40;
+                margin:top left-right bottom;
+                margin:top right bottom left(TRBL)
+
+        padding - it used to apply space inside the tags;
+
+            padding:auto; - it print in center of area.
+                padding:30px; - it apply 30px gap from top, right, left ,bottom. inside of the box model.
+                padding-top:20px;
+                padding-left:30px;
+                padding-bottom:40;
+                padding:top left-right bottom;
+                padding:top right bottom left(TRBL)
