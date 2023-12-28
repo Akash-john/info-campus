@@ -1,0 +1,28 @@
+body{
+    
+    margin:20px 10% 20px;
+}
+
+header{
+    text-align: center;
+    padding: 10px;
+}
+
+#container{
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+    padding: 8px;
+    font-size: 18px;
+}
+
+button:focus{
+    background: red;
+}
+
+h1 {
+    color: blue;
+    font-size: 60px;
+}

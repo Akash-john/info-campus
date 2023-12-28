@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center" cellspacing="15">
+        <tr>
+            <td><a href="form2.html">Contact Us</a></td>
+            <td><a href="form3.html">Register</a></td>
+            <td><a href="form4.html">Login</a></td>
+            <td><a href="form5.html">Enquiry</a></td>
+        </tr>
+    </table>
+    <hr />
+
+    <!--server side language action for form on click it will send data to the action-->
+    <!--method how to share data with secure mode or normal mode-->
+    <!--enctype encrypt the file type while transfering to the server-->
+    <form action="usercheck.php" method="post"  enctype="multipart/form-data">
+                 <table align="center" cellpadding="15" bgcolor="skyblue">
+                         <caption>
+                         <h1>Login</h1>
+                         </caption>
+
+        <tr>
+            <th>Email ID</th>
+            <!--myemail-->
+            <td><input type="text"   id="" size="40" name="myemail" /></td>
+        </tr>
+
+        <tr>
+            <th>Password</th>
+            <td><input type="password" name="mypassword" id="" size="40"/></td>
+        </tr>
+
+        <tr>
+            <th colspan="2"> 
+                <button type="submit"> Login</button>
+                <p>
+                    <a href="form3.html"> New User ? Create Account </a>
+                </p>
+            </th>
+        </tr>
+    </table>
+
+  </form>
+</body>
+</html>

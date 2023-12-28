@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript API</title>
+    <link rel="stylesheet" href="style.css"/>
+
+        <script>
+
+        //Get Home Function
+        const getHome = () =>
+        {
+                fetch("home.html")
+                .then(xyz => xyz.text()) //text or json format
+                .then(homeData =>{
+                   document.getElementById("container").innerHTML = homeData;
+                })
+        }
+
+        //Get About Function
+        const getAbout = () =>{
+            document.getElementById("container").innerHTML = "<h1>About us </h1>"
+
+            fetch("about.html")
+                .then(xyz => xyz.text()) //text or json format
+                .then(aboutData => {
+                   document.getElementById("container").innerHTML = aboutData;
+                })
+        }
+
+        //Get Contact Function
+        const getContact = () =>{
+            fetch('contact.html')
+            .then(xyz => xyz.text()) //text or json format
+            .then(abc => {
+                document.getElementById("container").innerHTML = abc;
+            })
+        }
+
+        //Get City Function
+
+        const getCity = () =>{
+            fetch("city.json")
+            .then(xyz => xyz.json())
+            .then(city => {
+                let data = `<h1> City List </h1>`;
+                cityArray.map((cityname,index) =>{
+                    data = data + "<p>" + cityname + "</p>"
+                })
+
+                document.getElementById("container").innerHTML = data;
+            })
+        }
+
+        </script>
+    </head>
+    
+    <body>
+        <header>
+            <button onclick="getHome()">Home</button>
+            <button onclick="getAbout()">About Us</button>
+            <button onclick="getContact()">Contact Us</button>
+            <button onclick="getCity()">City</button>
+            <button onclick="getBook()">Book</button>
+        </header>
+
+        <section id="container">
+            <p>Please Wait Loading</p>
+        </section>
+    </body>
+
+
+</html>

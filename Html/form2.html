@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    </head>
+
+    <body>
+        
+        <table align="center" cellspacing="15">
+            <tr>
+                <td><a href="form2.html">Contact Us</a></td>
+                <td><a href="form3.html">Register</a></td>
+                <td><a href="form4.html">Login</a></td>
+                <td><a href="form5.html">Enquiry</a></td>
+            </tr>
+        </table>
+
+        <hr size="5" color="orange"/>
+        
+
+        <table  align="center" cellpadding="10" >
+            
+            <caption>
+                <h2>Contact Us</h2>
+            </caption>
+
+            <tr>
+                <th>Your full Name :</th>
+                <td><input readonly type="text" placeholder="Enter your Name" size="40"/></td>
+            </tr>
+
+            <tr>
+                <th>Mobile No :</th>
+                <!---Number type dont have size property...-->
+                <td><input disabled type="number" placeholder="Enter your Mobile No"  /></td>
+            </tr>
+
+            <tr>
+                <th>Email ID :</th>
+                <td><input type="email" required
+                 value="test@gmail.com"    placeholder="Enter Your Email Id.." size="40"/></td>
+            </tr>
+
+            <tr>
+                <th>Your Message :</th>
+                <td><textarea maxlength="100" placeholder="enter your message" cols="40" rows="10" ></textarea></td>
+            </tr>
+
+            <tr >
+                <th colspan="2">
+                    <button type="submit">Send Message</button>
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>
