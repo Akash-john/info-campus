@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <script>
+        let transportDetails ={
+       
+            t_number:"Vehicle-1",
+            t_type:"small",
+            t_root:"Transport_One",
+            t_driver:"John Doe",
+            t_mobile_no:8232323789,
+        }
+
+        let transportBook = [
+        {
+       
+                     t_number:"Vehicle-1",
+                     t_type:"small",
+                     t_root:"Transport_One",
+                     t_driver:"John Doe",
+                     t_mobile_no:8232323789,
+            },
+
+            {
+       
+                    t_number:"Vehicle-1",
+                    t_type:"medium",
+                    t_root:"Transport_One",
+                    t_driver:"John Doe",
+                    t_mobile_no:8232323789,
+            },
+
+            {
+       
+                    t_number:"Vehicle-1",
+                    t_type:"large",
+                    t_root:"Transport_One",
+                    t_driver:"John Doe",
+                    t_mobile_no:8232323789,
+            },
+
+        ]
+
+        const delData = (idx)=>{
+        
+            transportBook.splice(idx,1)
+            getData();//reload the data
+        }
+
+        const getData = () => {
+            let data = ""
+
+            transportBook.map((item,idx)=>{
+                data += `
+                <tr>
+                    <td>${idx + 1}</td>
+                    <td>${item.t_number}</td>
+                    <td>${item.t_type}</td>
+                    <td>${item.t_root}</td>
+                    <td>${item.t_driver}</td>
+                    <td>${item.t_mobile_no}</td>
+                    <td><button class="del-btn" onclick='delData("${idx}")'>Delete</button></td>
+                </tr>
+                `
+            })
+
+            document.getElementById("data-container").innerHTML = data;
+        }
+
+        const saveData = () =>{
+
+            console.log("button is clicked")
+            let tNumber = document.getElementById("transportNo").value;
+            let tRoot = document.getElementById("root-no").value;
+            let tType = document.getElementById("size-field").value;
+            let tDriverName = document.getElementById("driver-name").value;
+            let tMobileNo = document.getElementById("driver-mob-num").value;
+
+            let newTransportDetails =             {
+       
+                    t_number:tNumber,
+                    t_type:tType,
+                    t_root:tRoot,
+                    t_driver:tDriverName,   
+                    t_mobile_no:tMobileNo,
+            }
+        
+            transportBook = transportBook.concat(newTransportDetails)
+     
+            getData();
+
+            document.getElementById("transportNo").value = "";
+            document.getElementById("root-no").value = "";
+            document.getElementById("size-field").value = "";
+            document.getElementById("driver-name").value = "";
+            document.getElementById("driver-mob-num").value = "";
+            
+            console.log("button is clicked")
+
+        }   
+    </script>
+    <style>
+        .t1-header{
+            background-color: rgb(229, 152, 152);
+            color: rgb(171, 9, 9);
+            text-align: left;
+            margin: 0;
+        }
+
+        .t1-master{
+            text-align: left;
+            border: 1px solid rgb(242, 170, 170);
+            padding: 0;
+            margin: 0;
+            border-radius: 5px;
+        }
+
+        button{
+            width: 100%;
+            background-color: rgb(50, 50, 201);
+            border:none;
+            padding:5px 10px 5px 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="text"]{
+            padding: 5px;
+            width: 90%;
+        }
+
+        input[type="number"]{
+            padding: 5px;
+            width: 90%;
+        }
+
+        select{
+            padding: 5px;
+            width: 100%;
+        }
+
+        .data-header{
+            color:rgb(159, 4, 4)
+        }
+
+        #data-container{
+            background-color: white;
+   
+        }
+        .del-btn{
+            background-color: rgb(184, 49, 49);
+            border-radius: 5px;
+        }
+
+
+    </style>
+</head>
+<body onload="getData()">
+    <h1 align="center"><font color="red">Transport Details</font></h1>
+    <table class="t1-master" align="left" cellpadding="10" cellspacing="1" width=20%" border="0">
+        <tr bgcolor="red" class="t1-header">
+            <td colspan="2">New Transport</td>
+        </tr>
+        <tr>
+            <th>Transport Number</th><br/>
+        </tr>
+
+        <tr>
+            <td><input type="text" name="transport-no" value="" id="transportNo"/></td>
+        </tr>
+
+        <tr>
+            <th>Root Name</th>
+        </tr>
+
+        <tr>
+            <td><input type="text" name="root-no" value="" id="root-no"/></td>
+        </tr>
+        <tr>
+            <th>Size</th>
+        </tr>
+
+        <tr>
+            <td >
+                <select name="size" id="size-field">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="size">XL</option>
+                </select>
+            </td>
+        </tr>
+
+        
+
+        <tr>
+            <th>
+                Drive Name
+            </th>
+        </tr>
+
+
+        <tr>
+            <td><input type="text" value="" id="driver-name"></td>
+        </tr>
+
+        <tr>
+            <th>Drive Mobile No</th>
+        </tr>
+
+        <tr>
+            <td><input type="number" id="driver-mob-num" value=""></td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <button type="submit" onclick="saveData()">save</button>
+            </td>
+        </tr>
+    </table>
+
+    <table align="right"  cellpadding="10" width="75%" border="1" bgcolor="lightgray" bordercolor="white" cellspacing="1">
+    
+        <thead>
+            <tr class="data-header">
+                <th>TD-1</th>
+                <th>T-Number</th>
+                <th>Type</th>
+                <th>Transport root</th>
+                <th>Driver</th>
+                <th>Mobile No</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="data-container"></tbody>
+
+    </table>
+    
+</body>
+</html>

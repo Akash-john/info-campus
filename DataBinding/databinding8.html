@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const changePicture = (pickname) =>{
+             
+                   const a = document.getElementById("master-pic").src = pickname;  
+            }
+        </script>
+
+        <style>
+            img:hover{
+                box-shadow:0px 0px 7px red;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+
+    
+    <body>
+        <center>
+            <h1> Image Handling  Using  Javascript</h1>
+            <img id="master-pic"  src="1.avif" alt="img1" height="500" width="700"/>
+            <br/><br/>
+            <!--onclick & on mouse enter events with the javascript -->
+            <img src="1.avif" alt="img1" height="100" width="130" onmouseenter="changePicture('1.avif')"/>
+            <img src="2.webp" alt="img2" height="100" width="130" onmouseenter="changePicture('2.webp')"/>
+            <img src="3.webp" alt="img3" height="100" width="130" onmouseenter="changePicture('3.webp')"/>
+            <img src="4.webp" alt="img4" height="100" width="130" onmouseenter="changePicture('4.webp')"/>
+
+
+        </center>
+    </body>
+</html>
