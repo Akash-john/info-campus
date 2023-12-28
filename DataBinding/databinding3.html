@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    const one = () =>{
+        let a = document.getElementById("message").value;
+        document.getElementById("output").innerText = a;
+        document.getElementById("total-len").innerText = a.length
+
+    }
+   </script>
+</head>
+<body>
+    <h1>Javascript input and output</h1>
+    <p>
+        <textarea id="message" rows="10" cols="50" maxlength="100"></textarea>
+    </p>
+    <button onclick="one()">Print Message</button>
+    <p id="output"></p>
+    <h1 id="total-len">0</h1>
+</body>
+</html>
