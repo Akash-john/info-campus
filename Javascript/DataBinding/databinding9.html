@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = () =>{
+                let data = ""; 
+
+                for(let i=1; i<=10; i++)
+                {
+                    data += "<p>" + i + "</p>";
+                
+                  
+                }
+                document.getElementById("container").innerHTML = data
+            }
+
+            const two = () =>{
+                let data = "";
+
+                for(let i=11; i<=20;i++){
+
+                    data += "<p>" + i + "</p>";
+
+                }
+
+                
+                document.getElementById("container").innerHTML = data
+            }
+
+            const three = () =>{
+                let data = "";
+
+                //modulus  method :1
+                // for(let i=1; i<=20; i++){
+                //     if(i % 2 !== 0){
+                //         data += "<p>" + i + "</p>"
+                //     }
+                // }
+
+                for(let i=1; i<=20; i= i+2){
+                  
+                        data += "<p>" + i + "</p>"
+                
+                }
+
+                document.getElementById("container").innerHTML = data;
+            }
+
+            const four = () =>{
+                let data = "";
+
+                
+                // modulus  method :1
+                for(let i=1; i<=20; i++){
+                    if(i % 2 == 0){
+                        data += "<p>" + i + "</p>"
+                    }
+                }
+
+
+                // for(let i=2; i<=20; i= i+2){
+                  
+                //   data += "<p>" + i + "</p>"
+          
+            //  }
+
+                 document.getElementById("container").innerHTML = data;
+            }
+        </script>
+
+        <style>
+            #container{
+                width: 80%;
+                margin: auto;
+                display: grid;
+                grid-template-columns: auto auto auto auto
+
+            }
+
+            #container p{
+                margin:30px 30px 30px;
+                font-size: 40px;
+                color: blue;
+                padding:15px;
+                box-shadow: 0px 0px 5px grey;
+                text-align: center;
+            }
+
+            button{
+                cursor: pointer;
+            }
+
+            button:focus{
+                background: red;
+            }
+        </style>
+    </head>
+
+    <body onload="one()">
+        <center>
+        <h1> Javascript For Loop</h1>
+
+        <button onclick="one()"> Print 1 to 10</button>
+        <button onclick="two()"> Print 11 to 20</button>
+        <button onclick="three()"> Print 1 to 20 odd number</button>
+        <button onclick="four()"> Print 1 to 20 even number</button>
+    </center>
+        <div id="container">No Data Yet...</div>
+    </body>
+</html>

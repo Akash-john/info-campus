@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = () =>{
+
+                //we have to parseInt to convert string behaviour to number...number + addition
+                let a = parseInt(document.getElementById("n1").value)
+                let b = parseInt(document.getElementById("n2").value)
+
+                const c = a + b;
+                const result =  document.getElementById("result").innerText = c;
+                a =""
+                b =""
+                return result;
+            }
+            const two = () =>{
+                let a = parseInt(document.getElementById("n1").value)
+                let b = parseInt(document.getElementById("n2").value)
+
+                const c = a - b;
+                const result =  document.getElementById("result").innerText = c;
+                return result;
+            }
+            const three = () =>{
+                let a = parseInt(document.getElementById("n1").value)
+                let b = parseInt(document.getElementById("n2").value)
+
+                const c = a * b;
+                const result =  document.getElementById("result").innerText = c;
+                return result;
+            }
+            const four = () =>{
+                let a = parseInt(document.getElementById("n1").value)
+                let b = parseInt(document.getElementById("n2").value)
+
+                const c = a / b;
+                const result =  document.getElementById("result").innerText = c;
+                return result;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 id="result">0</h1>
+        <p>Number 1 :<input type="number" id="n1"</p>
+        <p>Number 2 :<input type="number" id="n2"</p>
+
+        <p>
+            <button onclick="one()">+</button>
+            <button onclick="two()">-</button>
+            <button onclick="three()">*</button>
+            <button onclick="four()">/</button>
+        </p>
+     
+
+    </body>
+</html>

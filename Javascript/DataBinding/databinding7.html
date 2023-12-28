@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = () =>{
+
+                let name = document.getElementById("fname").value;
+                document.getElementById("myname").innerText = "My Name is "+ name + "--" + name.length;
+
+                let mobileNo = document.getElementById("mobile").value;
+                document.getElementById("contact-no").innerText = mobileNo;
+
+                let emailId = document.getElementById("email").value;
+                document.getElementById("my-email").innerText = emailId;
+
+                let myEdu = document.getElementById("edu").value;
+                document.getElementById("my-edu").innerText = myEdu;
+
+                let msg = document.getElementById("msg").value;
+                document.getElementById("about-me").innerText = msg;
+
+            }   
+
+        </script>
+    </head>
+
+    <body>
+        <h1>html and javascript input and output</h1>
+        <p>
+            What is your name  ? <input type="text" id="fname"  onkeyup="one()"/>
+           
+        </p>
+
+        <p>
+            What is your mobile no  ? <input type="number" id="mobile" onkeyup="one()" />
+        </p>
+
+        <p>
+            What is your email id  ? <input type="email" id="email" onkeyup="one()" />
+        </p>
+        
+
+        <p>
+            What is your education  ? <input type="text" id="edu" onkeyup="one()" />
+        </p>
+
+        <p>
+         <textarea name="message" id="msg" cols="30" rows="10" onkeyup="one()"></textarea>
+        </p>
+        <table align="center" cellpadding="25" border="1" bordercolor="red" cellspacing="5">    
+            <thead>
+                <tr>
+                    <th>FullName</th>
+                    <td id="myname"></td>
+                </tr>
+
+                <tr>
+                    <th>Mobile No</th>
+                    <td id="contact-no"></td>
+                </tr>
+
+                <tr>
+                    <th>Email ID</th>
+                    <td id="my-email"></td>
+                </tr>
+
+                <tr>
+                    <th>Education</th>
+                    <td id="my-edu"></td>
+                </tr>
+
+                <tr>
+                    <th>Message</th>
+                    <td id="about-me"></td>
+                </tr>
+            </thead>
+
+        </table>
+       
+    </body>
+</html>

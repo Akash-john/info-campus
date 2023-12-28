@@ -6,6 +6,8 @@
     <title>Javascript API</title>
     <link rel="stylesheet" href="style.css"/>
 
+
+
         <script>
 
         //Get Home Function
@@ -45,7 +47,7 @@
             .then(xyz => xyz.json())
             .then(city => {
                 let data = `<h1> City List </h1>`;
-                cityArray.map((cityname,index) =>{
+                city.map((cityname,index) =>{
                     data = data + "<p>" + cityname + "</p>"
                 })
 
