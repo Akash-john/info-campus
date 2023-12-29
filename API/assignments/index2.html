@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <link rel="stylesheet" href="style2.css"/>
+        <script>
+            const getUserList = () =>{
+                fetch("user.json").
+                then((res)=> res.json())
+                .then((dataArray)=>{
+                    let data = ""
+                    dataArray.map((user,idx)=>
+                    {
+                        data += `<p class="inner-data"><span>${idx+1}</span>   : ${user.name}</p>`
+                    }
+                    )
+
+                    document.getElementById("user-data-container").innerHTML = data;
+                })
+            }
+
+            const getBookList = () =>{
+                fetch("book.json").
+                then((res)=> res.json())
+                .then((dataArray)=>{
+                    let data = ""
+                    dataArray.map((bookItem,idx)=>
+                    {
+                        data += `<p class="inner-data"><span>${idx+1}</span>   :${bookItem.book}</p>`
+                    }
+                    )
+
+                    document.getElementById("book-data-container").innerHTML = data;
+                })
+            }
+
+            const getCompanyList = () =>{
+                fetch("company.json").
+                then((res)=> res.json())
+                .then((dataArray)=>{
+                    let data = ""
+                    dataArray.map((company,idx)=>
+                    {
+                        data += `<p class="inner-data"><span>${idx+1}</span>   :${company.company}</p>`
+                    }
+                    )
+
+                    document.getElementById("company-data-container").innerHTML = data;
+                })
+            }
+
+            const getEmployeeList = () =>{
+                fetch("employee.json").
+                then((res)=> res.json())
+                .then((dataArray)=>{
+                    let data = ""
+                    dataArray.map((employeeName,idx)=>
+                    {
+                        data += `<p class="inner-data"><span>${idx+1}</span>   :${employeeName.employee}</p>`
+                    }
+                    )
+
+                    document.getElementById("employee-data-container").innerHTML = data;
+                })
+            }
+        </script>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="card">
+                <h1>User List</h1>
+                <hr color="rgb(211, 209, 209)" size="0.5"/>
+                <section id="user-data-container">
+                    <p></p>
+                </section>
+                <button onclick="getUserList()">Get Book List</button>
+            </div>
+           
+            <div class="card">
+                <h1 >Book List</h1>
+                <hr color="gray" size="0.5"/>
+                <section id="book-data-container">
+                    
+                </section>
+
+                <button onclick="getBookList()">Get Book List</button>
+            </div>
+            <div class="card">
+                <h1 >Company List</h1>
+                <hr color="gray" size="0.5"/>
+                <section id="company-data-container">
+                    
+                </section>
+                <button onclick="getCompanyList()">Get Company List</button>
+
+            </div>
+            <div class="card">
+                <h1>Employee List</h1>
+                <hr color="gray" size="0.5"/>
+                <section id="employee-data-container">
+                    
+                </section>
+                <button onclick="getEmployeeList()">Get Employee List</button>
+            </div>
+        </div>
+    </body>
+</html>

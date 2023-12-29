@@ -9,7 +9,7 @@ header{
 }
 
 #container{
-    text-align: center;
+    text-align: left;
 }
 
 button{
@@ -25,4 +25,25 @@ button:focus{
 h1 {
     color: blue;
     font-size: 60px;
+}
+
+.four{
+    margin: 2%;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 30px;
+}
+
+.two{
+    margin:2%;
+    width: 40%;
+    padding: 2%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.two h2{
+    text-transform: capitalize;
+    color:skyblue
 }
