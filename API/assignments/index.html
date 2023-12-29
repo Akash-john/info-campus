@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+    
+    <script>
+        const getAlbum = () =>{
+            let title = "Albums from dummy Json";
+            fetch("https://jsonplaceholder.typicode.com/albums")
+            .then((res)=>res.json())
+            .then((albumArray,idx)=>{
+                let data = "";
+        
+                albumArray.map((album,idx)=>{
+                    
+                    data += `<div class="card">
+                                <p><span>${album.id} </span>: ${album.title}</p>
+                            </div>`
+                })
+                document.getElementById("container").innerHTML=data
+            })
+
+            document.getElementById('title').innerHTML = title
+        }
+
+        const getTodos = () =>{
+            let title = "Todo's from dummy json"
+            fetch("https://jsonplaceholder.typicode.com/todos")
+            .then((res)=>res.json())
+            .then((todosArray,idx)=>{
+                let data = "";
+                todosArray.map((todos,idx)=>{
+                   
+                    data += `<div class="card">
+                                <p><span>${todos.id} </span>: ${todos.title}</p>
+                                <p>isCompleted: ${todos.completed}</p>
+                            </div>`
+                })
+                document.getElementById("container").innerHTML=data
+            })
+            document.getElementById("title").innerText = title
+        }
+
+        const getUsers = () =>{
+            let title = "User's from dummy json"
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then((res)=>res.json())
+            .then((todosArray,idx)=>{
+                let data = "";
+                todosArray.map((users,idx)=>{
+                 
+                    data += `<div class="card">
+                                <p><span>Name</span>: ${users.name}</p>
+                                <p><span>UserName</span>: ${users.username}</p>
+                                <p><span>Email</span>: ${users.email}</p>
+                                <p><span>City</span>:${users.address.city}</p>  
+                                <p><span>Mobile</span>:${users.phone}</p>    
+
+                            </div>`
+                })
+                document.getElementById("container").innerHTML=data
+            })
+
+            document.getElementById("title").innerText = title
+            
+        }
+    </script>
+
+</head>
+<body onload="getAlbum()">
+    <header>
+        <button onclick="getAlbum()">Albums</button>
+        <button onclick="getTodos()">Todos</button>
+        <button onclick="getUsers()">Users</button>
+    </header>
+    <h1 align="center" id="title"></h1>
+    <section id="container"></section>
+</body>
+</html>

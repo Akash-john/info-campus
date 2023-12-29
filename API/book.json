@@ -1,0 +1,38 @@
+[
+    {
+        "name":"Html",
+        "price":100
+    },
+    {
+        "name":"Css",
+        "price":300
+    },
+    {
+        "name":"React",
+        "price":500
+    },
+    {
+        "name":"Node",
+        "price":100
+    },
+    {
+        "name":"Mysql",
+        "price":200
+    },
+    {
+        "name":"XML",
+        "price":800
+    },
+    {
+        "name":"JSON",
+        "price": 200
+    },
+    {
+        "name":"Java",
+        "price": 300
+    },
+    {
+        "name":"PHP",
+        "price":500
+    }
+]
