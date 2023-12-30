@@ -20,7 +20,20 @@ Responsive Webpage = HTML(tags) + CSS(property & values)
             ====================================================================
         example:1     <p style="height:200px; background:red; width=300px"></p>
 
+        =>About Inline CSS?
+                
+                -> It is  1 to 1 (we write css code 1 time and use max 1 time)"
+                -> Due to 1 to 1 , the css code will be duplicate.
+                -> the duplicate css code increase file weight
+                -> heavy file take long time to load.
+                -> heavy file need more disk space in server
+                -> heavy file consume more internet data
+                -> Duplicate code take long time to fix the error.
+                -> Inline css and heavy file get rejected by google search
+                -> user experience may be bad if it long time to load.
 
+        =>About Internal CSS?
+                it is 1 to many  = write css code 1 time and use many time.
 
 ================CSS Property & Values ====
         
@@ -48,3 +61,16 @@ Responsive Webpage = HTML(tags) + CSS(property & values)
                 padding-bottom:40;
                 padding:top left-right bottom;
                 padding:top right bottom left(TRBL)
+=====================================================================
+Margin Apply space outside of element (or) tag.
+Padding Apply Space inside of tag.
+
+======================================================================
+        display:inline => it converts block level element to inline tag where height and width wouldn't applied.
+        display:inline-block => it converts block level element to inline where height and width can be applied
+        display:block
+        display:none
+        display:flex
+        display:gird
+        display:hidden
+=================================================================================
