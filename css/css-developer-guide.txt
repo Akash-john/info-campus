@@ -35,6 +35,72 @@ Responsive Webpage = HTML(tags) + CSS(property & values)
         =>About Internal CSS?
                 it is 1 to many  = write css code 1 time and use many time.
 
+        
+-->Type of selector in csss ?
+
+        -------------------------------------------------------
+        1. tag selector  - example2.html
+                example
+
+                h2 {
+                        color:green;
+                        font-size: 50px;
+                        display:inline-block;
+                        width:33%;
+                }
+
+        --------------------------------------------------------
+        2. tag group selector -example2.html
+                example
+
+                h2, p{
+                        font-style: italic;
+                }
+        ---------------------------------------------------------
+        3. id selector    -example3.html
+                Example  
+                        #block3{
+                                color:white;
+                                font-size:40px;
+                                text-align:center;
+
+                        }
+        ---------------------------------------------------------
+        4. class selector - example4.html
+
+                .service{
+                        margin:2%;
+                        width:20%;
+                        height:250px;
+                        background:purple;
+                        color:white;
+                        font-size: 50px;
+                        text-align: center;
+                        display:inline-block;
+                }
+        ---------------------------------------------------------
+        5. attribute selector - example5.html
+
+
+                input[type="text"]{
+                height: 30px;
+                width: 300px;
+            }
+        ------------------------------------------------------
+        6. parent selector - example6.html
+                Example:
+
+                    div  p {
+
+                        font-size: 30px;
+                        width: 200px;
+                        height: 200px;
+                        color: blue;
+                        background-color: yellow;
+                        display: inline-block;
+                }
+
+
 ================CSS Property & Values ====
         
         height = 3 types
@@ -74,3 +140,11 @@ Padding Apply Space inside of tag.
         display:gird
         display:hidden
 =================================================================================
+
+
+=====================Class 3 pending============================================
+
+
+
+        
+                
