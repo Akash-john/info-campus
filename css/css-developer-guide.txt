@@ -36,7 +36,9 @@ Responsive Webpage = HTML(tags) + CSS(property & values)
                 it is 1 to many  = write css code 1 time and use many time.
 
         
--->Type of selector in csss ?
+        To Target the Elements//
+        
+        -->Type of selector in csss ?
 
         -------------------------------------------------------
         1. tag selector  - example2.html
@@ -104,8 +106,36 @@ Responsive Webpage = HTML(tags) + CSS(property & values)
 ================CSS Property & Values ====
         
         height = 3 types
+                ->height:200px - it is fixeed for 200 px only.
+                ->min-height-200px - the min height is fixed. maximun is based on contents.
+                ->max height
+                ->height:auto - the min height and max height is based on contents.
+
+
+    ======================================================================================  
         width  = 4 types
+                width:px; - it is fixed in all size of window width.
+                width:% - it is suitable in all size of window width
+                min-width:px;
+                max-width: px;
+    ================================================================================
         background = 9 types
+
+                =>background:red;
+                =>background-color:red;
+                =>background-color:rgb(100, 120 , 50) -> 0 - 255
+                =>background-color:rgba(100, 120, 50 , 0.5) a - brightness
+                =>background-image:url("1.jpg") ; background image
+                =>background-color: linear-gradient(red, green , blue) to bottom
+                =>background-color: linear-gradient(to left, red, green , blue) 
+                =>background-color: linear-gradient(to right,red,  green , blue) 
+                =>background-color: linear-gradient(to top, red, green , blue) 
+                
+
+
+
+
+
         float - it converts from block level tag to inline tag.
                 float:left - it print from left to right
                 float:right - it print from right to left
