@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript API</title>
+    <link rel="stylesheet" href="style.css"/>
+
+        <script>
+            const getBookList = () =>{
+                fetch('http://localhost:1234/booklist')
+                .then((respose) => respose.json())
+                .then((bookArray) => {
+                        let data = "";
+                        bookArray.map((book, idx) =>{
+                            data = data + "<div class ='two'>";
+                            data = data + "<h2>" +  book.bookname + "</h2>"
+                            data = data + "<p>"  +  book.author   + "</p>";
+                            data = data + "</div>";
+                        })
+                        document.getElementById("container").innerHTML = data;
+                })
+            }
+
+            const getEmployeeList = () =>{
+                fetch('http://localhost:1234/emplist')
+                .then((respose) => respose.json())
+                .then((empArray) => {
+                        let data = "";
+                        empArray.map((emp, idx) =>{
+                            data = data + "<div class ='two'>";
+                            data = data + "<h2>" +  emp.empname + "</h2>"
+                            data = data + "<p>"  +  emp.salary   + "</p>";
+                            data = data + "<p>"  +  emp.city   + "</p>";
+                            data = data + "<p>"  +  emp.dept   + "</p>";
+                            data = data + "</div>";
+                        })
+                        document.getElementById("container").innerHTML = data;
+                })
+            }
+
+            const getItemList = () =>{
+                fetch('http://localhost:1234/itemlist')
+                .then((respose) => respose.json())
+                .then((itemArray) => {
+                        let data = "";
+                        itemArray.map((item, idx) =>{
+                            data = data + "<div class ='two'>";
+                            data = data + "<h2>" +  item.id + "</h2>"
+                            data = data + "<p>"  +  item.name   + "</p>";
+                            data = data + "<p>"  +  item.price   + "</p>";
+                            data = data + "<p>"  +  item.qty   + "</p>";
+                            data = data + "</div>";
+                        })
+                        document.getElementById("container").innerHTML = data;
+                })
+            }
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <button onclick="getBookList()">Book List</button>
+            <button onclick="getEmployeeList()">Employee List</button>
+            <button onclick="getItemList()"> Item List</button>
+        </header>
+
+        <section id="container">
+            
+        </section>
+    </body>
+</html>
+
+    
