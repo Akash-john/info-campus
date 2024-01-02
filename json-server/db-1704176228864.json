@@ -1,0 +1,61 @@
+{
+  "booklist": [
+    {
+      "id": 1,
+      "bookname": "HTML",
+      "author": "Alex"
+    },
+    {
+      "id": 2,
+      "bookname": "CSS",
+      "author": "ALI"
+    },
+    {
+      "id": 3,
+      "bookname": "REACT",
+      "author": "SURAJ"
+    },
+    {
+      "id": 1,
+      "bookname": "HTML",
+      "author": "MOHIT"
+    }
+  ],
+  "emplist": [
+    {
+      "id": 1,
+      "empname": "Ali",
+      "salary": 15000,
+      "city": "Bangalore",
+      "dept": "Software"
+    },
+    {
+      "id": 2,
+      "empname": "Sumith",
+      "salary": 18000,
+      "city": "Pune",
+      "dept": "Marketing"
+    },
+    {
+      "id": 3,
+      "empname": "Ali",
+      "salary": 19000,
+      "city": "chennai",
+      "dept": "Operation"
+    }
+  ],
+  "itemlist": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "price": 300,
+      "qty": 30
+    },
+    {
+      "id": 2,
+      "name": "Mango",
+      "price": 100,
+      "qty": 20
+    }
+  ]
+}
