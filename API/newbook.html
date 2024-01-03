@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const save = () =>{
+                let name = document.getElementById("bname").value;
+                let author = document.getElementById("bauthor").value;
+                let bookinfo = {"bookname":name, "author": author};
+                let url = "http://localhost:1234/booklist";
+                let postData = {
+                    headers:{'Content-Type':'application/json'},
+                    method:"POST",
+                    body:JSON.stringify(bookinfo) // convert array to json
+                }
+               fetch(url, postData) 
+               .then(response=>response.json())
+               .then(bookdata =>{
+                             alert("Data saved successfully...!");
+                             window.location.href = "api.html";
+               })
+            }
+        </script>
+    </head>
+    <body>
+        <table cellpadding="20" align="center" bgcolor="lightgreen">
+            <caption>
+                <h1> Enter Book Details </h1>
+            </caption>
+            <tr>
+                <th> Enter Book Name </th>
+                <td> <input type="text" size="40" id="bname"/> </td>
+            </tr>
+            <tr>
+                <th> Enter Book Author </th>
+                <td> <input type="text" size="40" id="bauthor"/> </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button onclick="save()"> Save Book </button>
+                    <hr color="red" size="1"/>
+                    <a href="api.html"> Back to List </a>
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>
