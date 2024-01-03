@@ -139,6 +139,8 @@ Responsive Webpage = HTML(tags) + CSS(property & values)
         float - it converts from block level tag to inline tag.
                 float:left - it print from left to right
                 float:right - it print from right to left
+
+                
         margin - it used to apply space outside of tag.
                 margin:auto; - it print in center of area.
                 margin:30px; - it apply 30px gap from top, right, left ,bottom.
@@ -167,14 +169,51 @@ Padding Apply Space inside of tag.
         display:block
         display:none
         display:flex
-        display:gird
+        display:grid
+                grid-template-columns :auto auto auto auto;
+                grid-template-columns :50% auto auto;
+                grid-template-columns :50% 30% 20%;
         display:hidden
 =================================================================================
 
+        border-
+        types of border
+        ->solid
+        ->dotted
+        ->double
+        ->dashed
+        ->inset
+        ->outset
+        ->ridge
+        ->groove
 
-=====================Class 3 pending============================================
+        direction of border
+        ->border: it apply all side
+                ->border-left
+                ->border-right
+                ->border-top
+                ->border-bottom
+=====================================================================================
+
+box-shadow:from-left from-top density color
+
+
+as 
+        box-shadow: 1px 1px 5px grey
 
 
 
-        
-                
+===============================================================================
+                        Grid
+
+<section>
+            <p>Website Design</p>
+            <p>Website Development</p>
+            <p>Digital Marketing</p>
+            <p>Logo Design</p>
+            <p>Portal Development</p>
+            <p>App Development</p>
+            <p>Software Development</p>
+            <p>Media Marketing</p>
+            <p>Employment</p>
+        </section>
