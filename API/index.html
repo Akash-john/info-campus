@@ -6,6 +6,8 @@
     <title>Javascript API</title>
     <link rel="stylesheet" href="style.css"/>
 
+
+
         <script>
 
         //Get Home Function
@@ -45,13 +47,65 @@
             .then(xyz => xyz.json())
             .then(city => {
                 let data = `<h1> City List </h1>`;
-                cityArray.map((cityname,index) =>{
-                    data = data + "<p>" + cityname + "</p>"
+                city.map((cityname,index) =>{
+                    data = data + "<p class='four'>" + cityname + "</p>"
                 })
 
                 document.getElementById("container").innerHTML = data;
             })
         }
+
+        //Get Book Function
+
+        const getBook = () =>{
+            fetch("book.json")
+            .then((res) => res.json())
+            .then((bookArray)=>{
+                let data = "<h1> Book List </h1> "
+
+                bookArray.map((book, index)=>{
+                    data = data + "<div class = 'four'>";
+                    data = data + "<p>" + book.name + " in Rs."+ book.price+"</p>";
+                    data = data + "</div>"
+                })
+                document.getElementById("container").innerHTML = data;
+            })
+        }
+
+        //Get Blogs Function
+        const getBlogs = () =>{
+            fetch("https://jsonplaceholder.typicode.com/posts")
+            .then((res)=>res.json())
+            .then((dataArray)=>{ 
+                let data = "<h1>Blog List</h1>"
+                dataArray.map((blog,index)=>{
+                    data += "<div class='two'>"
+                    data += "<h2>" + blog.title +"</h2>"
+                    data += "<p>" + blog.body + "</p>"
+                    data += "</div>"
+                })
+
+                document.getElementById("container").innerHTML = data;
+            })
+        }
+
+        //Get Comments Function
+        const getComments = () =>{
+            fetch("https://jsonplaceholder.typicode.com/comments")
+            .then((res)=>res.json())
+            .then((dataArray)=>{ 
+                let data = "<h1>Comment List</h1>"
+                dataArray.map((blog,index)=>{
+                    data += "<div class='two'>"
+                    data += "<h2>" + blog.name +"</h2>"
+                    data += "<p>" + blog.body + "</p>"
+                    data += "</div>"
+                })
+
+                document.getElementById("container").innerHTML = data;
+            })
+        }
+
 
         </script>
     </head>
@@ -63,12 +117,12 @@
             <button onclick="getContact()">Contact Us</button>
             <button onclick="getCity()">City</button>
             <button onclick="getBook()">Book</button>
+            <button onclick="getBlogs()">Blogs</button>
+            <button onclick="getComments()">Comments</button>
         </header>
 
         <section id="container">
             <p>Please Wait Loading</p>
         </section>
     </body>
-
-
 </html>

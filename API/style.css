@@ -5,11 +5,13 @@ header{
 }
 
 #container{
+
     text-align: center;
     padding: 50px;
     width:100%;
     display:inline-block;
     margin: auto;
+
 }
 
 
@@ -56,4 +58,3 @@ h1 {
 .del-btn:focus{
     color: white;
     background: red;
-}

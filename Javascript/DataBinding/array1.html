@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Array</title>
+    <script>
+
+        let allItem = ["Laptop", "Desktop", "Keyboard", "Mouse"]
+
+   
+
+       
+
+        const getItem = () =>{
+            let data = "";
+
+            //read array item from the array using map() to list the items...
+            allItem.map((itemName, idx)=>
+                data += `<p> ${itemName} <br/> <br/><button onclick="deleteData(${idx})" >delete</button> </p>`
+
+            )
+
+           
+            document.getElementById("container").innerHTML = data
+        }
+
+        const deleteData = (idx) =>{
+          allItem.splice(idx,1);//(position, no.of element, and replace)
+          getItem();//calling getItem() func to reload the page after deleting the data
+        }
+
+
+        const  save = () =>{
+            let newProduct = document.getElementById("pname").value;
+            allItem.push(newProduct)
+            document.getElementById("pname").value = ""
+            getItem();
+        }
+
+  
+
+    </script>
+
+    <style>
+        #container{
+            width: 80%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        #container p{
+            margin: 30px;
+            border:1px solid rgb(200, 196, 196);
+            padding:20px;
+            box-shadow: 0px 10px 5px 0px gray;
+            cursor:pointer;
+ 
+        }
+
+    </style>
+</head>
+<body onload="getItem()">
+    <header>
+        <h1>Array add-list, del-list using Javascript</h1>
+        Enter Product Name : <input type="text" id="pname" value="">
+        <button onclick="save()">Save</button>
+    </header>
+
+    
+
+    <section id="container">No Data Yet...</section>
+</body>
+</html>

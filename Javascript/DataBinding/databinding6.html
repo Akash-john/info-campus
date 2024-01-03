@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = () =>{
+                let a = document.getElementById("city");
+                const selectedCity = a.value;
+                document.getElementById("mycity").innerText =  "Your city is :" + selectedCity;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Javascript select box input and output</h1>
+
+        <select id="city" onchange="one()">
+            <option value="">ChooseCity</option>
+            <option > Bangalore</option>
+            <option > chennai</option>
+            <option > Mumbai</option>
+            <option > pune</option>
+        </select>
+
+        <h1 id="mycity"> Your city is ?</h1>
+    </body>
+</html>
