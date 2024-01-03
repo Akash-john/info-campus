@@ -20,13 +20,122 @@ Responsive Webpage = HTML(tags) + CSS(property & values)
             ====================================================================
         example:1     <p style="height:200px; background:red; width=300px"></p>
 
+        =>About Inline CSS?
+                
+                -> It is  1 to 1 (we write css code 1 time and use max 1 time)"
+                -> Due to 1 to 1 , the css code will be duplicate.
+                -> the duplicate css code increase file weight
+                -> heavy file take long time to load.
+                -> heavy file need more disk space in server
+                -> heavy file consume more internet data
+                -> Duplicate code take long time to fix the error.
+                -> Inline css and heavy file get rejected by google search
+                -> user experience may be bad if it long time to load.
+
+        =>About Internal CSS?
+                it is 1 to many  = write css code 1 time and use many time.
+
+        
+        To Target the Elements//
+        
+        -->Type of selector in csss ?
+
+        -------------------------------------------------------
+        1. tag selector  - example2.html
+                example
+
+                h2 {
+                        color:green;
+                        font-size: 50px;
+                        display:inline-block;
+                        width:33%;
+                }
+
+        --------------------------------------------------------
+        2. tag group selector -example2.html
+                example
+
+                h2, p{
+                        font-style: italic;
+                }
+        ---------------------------------------------------------
+        3. id selector    -example3.html
+                Example  
+                        #block3{
+                                color:white;
+                                font-size:40px;
+                                text-align:center;
+
+                        }
+        ---------------------------------------------------------
+        4. class selector - example4.html
+
+                .service{
+                        margin:2%;
+                        width:20%;
+                        height:250px;
+                        background:purple;
+                        color:white;
+                        font-size: 50px;
+                        text-align: center;
+                        display:inline-block;
+                }
+        ---------------------------------------------------------
+        5. attribute selector - example5.html
+
+
+                input[type="text"]{
+                height: 30px;
+                width: 300px;
+            }
+        ------------------------------------------------------
+        6. parent selector - example6.html
+                Example:
+
+                    div  p {
+
+                        font-size: 30px;
+                        width: 200px;
+                        height: 200px;
+                        color: blue;
+                        background-color: yellow;
+                        display: inline-block;
+                }
 
 
 ================CSS Property & Values ====
         
         height = 3 types
+                ->height:200px - it is fixeed for 200 px only.
+                ->min-height-200px - the min height is fixed. maximun is based on contents.
+                ->max height
+                ->height:auto - the min height and max height is based on contents.
+
+
+    ======================================================================================  
         width  = 4 types
+                width:px; - it is fixed in all size of window width.
+                width:% - it is suitable in all size of window width
+                min-width:px;
+                max-width: px;
+    ================================================================================
         background = 9 types
+
+                =>background:red;
+                =>background-color:red;
+                =>background-color:rgb(100, 120 , 50) -> 0 - 255
+                =>background-color:rgba(100, 120, 50 , 0.5) a - brightness
+                =>background-image:url("1.jpg") ; background image
+                =>background-color: linear-gradient(red, green , blue) to bottom
+                =>background-color: linear-gradient(to left, red, green , blue) 
+                =>background-color: linear-gradient(to right,red,  green , blue) 
+                =>background-color: linear-gradient(to top, red, green , blue) 
+                
+
+
+
+
+
         float - it converts from block level tag to inline tag.
                 float:left - it print from left to right
                 float:right - it print from right to left
@@ -48,3 +157,24 @@ Responsive Webpage = HTML(tags) + CSS(property & values)
                 padding-bottom:40;
                 padding:top left-right bottom;
                 padding:top right bottom left(TRBL)
+=====================================================================
+Margin Apply space outside of element (or) tag.
+Padding Apply Space inside of tag.
+
+======================================================================
+        display:inline => it converts block level element to inline tag where height and width wouldn't applied.
+        display:inline-block => it converts block level element to inline where height and width can be applied
+        display:block
+        display:none
+        display:flex
+        display:gird
+        display:hidden
+=================================================================================
+
+
+=====================Class 3 pending============================================
+
+
+
+        
+                

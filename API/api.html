@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript API</title>
+    <link rel="stylesheet" href="style.css"/>
+
+        <script>
+            const delbook = (id) =>{
+                let url = "http://localhost:1234/booklist/"+id;
+              
+                let postData = {
+                    method:'delete'
+                }
+
+                fetch(url,postData)
+                .then((response) => response.json())
+                .then((emptyRes) =>{
+                    getBookList();
+                })
+            }
+
+            const getBookList = () =>{
+                fetch('http://localhost:1234/booklist')
+                .then((respose) => respose.json())
+                .then((bookArray) => {
+                        let data = "<h1>Book Details</h1>";
+                        bookArray.reverse().map((book, idx) =>{
+                            data = data + "<div class ='two'>";
+                            data = data + "<h2>" +  book.bookname + "</h2>"
+                            data = data + "<p>"  +  book.author   + "</p>";
+                            data = data + "<button class='del-btn' onclick='delbook("+book.id+")'>delete</button>";
+                            data = data + "</div>";
+                        })
+                        document.getElementById("container").innerHTML = data;
+                })
+            }
+
+            const delEmployee = (id) =>{
+                let url = "http://localhost:1234/emplist/"+id
+
+                let postData = {
+                    method:'delete'
+                }
+ 
+                fetch(url, postData)
+                .then((res)=> res.json())
+                .then((emptyRes)=>{
+                    getEmployeeList();
+                })
+            }
+
+            const getEmployeeList = () =>{
+                fetch('http://localhost:1234/emplist')
+                .then((respose) => respose.json())
+                .then((empArray) => {
+                        let data = "<h1>Employee Details</h1>";
+                        empArray.reverse().map((emp, idx) =>{
+                            data = data + "<div class ='two'>";
+                            data = data + "<h2>" +  emp.empname + "</h2>"
+                            data = data + "<p>"  +  emp.salary   + "</p>";
+                            data = data + "<p>"  +  emp.city   + "</p>";
+                            data = data + "<p>"  +  emp.dept   + "</p>";
+                            data = data + "<button class='del-btn' onclick='delEmployee("+emp.id+")'>delete</button>"
+                            data = data + "</div>";
+                        })
+                        document.getElementById("container").innerHTML = data;
+                })
+            }
+
+            const delItem = (id) =>{
+                let url = "http://localhost:1234/itemlist/"+id;
+                let postData = {
+                    method:"delete"
+                }
+
+                fetch(url,postData)
+                .then(res=>res.json())
+                .then((emptyRes)=>{
+                    getItemList();//reload the list
+                })
+            }
+
+            const getItemList = () =>{
+                fetch('http://localhost:1234/itemlist')
+                .then((respose) => respose.json())
+                .then((itemArray) => {
+                        let data = "<h1>Item List </h1>";
+                        itemArray.reverse().map((item, idx) =>{
+                            data = data + "<div class ='two'>";
+                            data = data + "<p>"  +  item.name   + "</p>";
+                            data = data + "<p> Price:"  +  item.price   + "</p>";
+                            data = data + "<p>"  +  item.qty   + "</p>";
+                            data = data + "<button class='del-btn' onclick='delItem("+item.id+")'>delete</button>"
+                            data = data + "</div>";
+                        })
+                        document.getElementById("container").innerHTML = data;
+                })
+            }
+
+            const newBook = () =>{
+
+                //redirecting the page
+                window.location.href="newbook.html"
+            }
+
+            const newEmployee = () =>{
+                window.location.href="newemployee.html"
+            }
+
+            const newItem = () =>{
+                window.location.href="newitem.html"
+            }
+
+        </script>
+
+    </head>
+    <body onload="getBookList()">
+        <header>
+            <button class="form-btn" onclick="newBook()">Add New Book</button>
+            <button onclick="getBookList()">Book List</button>
+            <button class="form-btn" onclick="newEmployee()">Add New Employee</button>
+            <button onclick="getEmployeeList()">Employee List</button>
+            <button class="form-btn" onclick="newItem()">Add New Item</button>
+            <button onclick="getItemList()"> Item List</button>
+        </header>
+
+        <section id="container">
+            
+        </section>
+    </body>
+</html>
+
+    

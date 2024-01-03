@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                #block_1{
+                    width: 200px;
+                    height: 200px;
+                    background-color: red;
+                    display: inline-block;
+                    margin: 30px;
+                    /*breaks the width in to height*/
+                    word-break: break-all;
+                }
+
+                #block_2{
+                    width: 200px;
+                    min-height: 150px; /*when content is more it adjust the height*/
+                    background-color: red;
+                    display: inline-block; 
+                    margin: 30px;
+                    /*breaks the width in to height*/
+                    word-break: break-all;
+                }
+
+
+                #block_3{
+                    width: 200px;
+                    height: auto; /*when content is more it adjust the height*/
+                    background-color: rgb(113, 106, 247);
+                    display: inline-block; 
+                    margin: 30px;
+                    /*breaks the width in to height*/
+                    word-break: break-all;
+                    color: white;
+                }
+            </style>
+        </head>
+
+        <body>
+            <p id="block_1">
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos provident quod totam architecto repudiandae doloribus nemo facilis! Consequatur voluptatibus molestias doloremque impedit obcaecati commodi ea nesciunt sapiente fugiat tempora! Delectus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nulla corporis quis suscipit, earum quo! Quas sunt beatae aperiam quis officiis magni harum quam corrupti? Nisi dignissimos soluta explicabo earum.
+            </p>
+
+            <p id="block_2">
+
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </p>
+
+            <p id="block_3">
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+             </p>
+        </body>
+
+    </html>

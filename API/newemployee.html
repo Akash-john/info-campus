@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const saveEmployee= ()=>{
+                let empName = document.getElementById("empname").value;
+                let empSalary = document.getElementById("empsalary").value;
+                let empCity = document.getElementById("empcity").value;
+                let empDept = document.getElementById("empdep").value;
+                let employeeInfo={
+                    empname: empName,
+                    salary: empSalary,
+                    city: empCity,
+                    dept: empDept
+                }
+                let url = "http://localhost:1234/emplist"
+
+                let postData = {
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
+                    method:"post",
+                    body:JSON.stringify(employeeInfo) // converts array in to json
+                }
+
+                fetch(url, postData)
+                .then(res => res.json())
+                .then(emptyResponse => {
+                    alert("Employee Details Saved SuccessFully")
+                    window.location.href="api.html"
+                })
+
+            }
+        </script>
+    </head>
+    <body>
+        <table cellpadding="20" align="center" bgcolor="lightblue" >
+            <caption>
+                <h1>Enter Employee Details</h1>
+            </caption> 
+
+            <tr>
+                <th>Enter Employee Name </th>
+                <td><input type="text" name="emp-name" id="empname"/></td>
+            </tr>
+
+            <tr>
+                <th>Enter Employee Salary</th>
+                <td><input type="number" name="emp-salary" id="empsalary"/></td>
+            </tr>
+
+            <tr>
+                <th>Enter the City</th>
+                <td>
+                    <input type="text" id="empcity"/> 
+                </td>
+            </tr>
+
+            <tr>
+                <th>Enter the Department</th>
+                <td><input type="text" name="empdep" id="empdep"></td>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+                    <button onclick="saveEmployee()">Save Employee</button>
+                    <hr color="red" size="1"/>
+                    <a href="api.html"> Back to List </a>
+                </th>
+            </tr>
+            
+        </table>
+    </body>
+</html>
