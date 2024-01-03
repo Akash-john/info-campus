@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>    
+        const saveItem = () =>{
+            let itemName = document.getElementById("item_name").value;
+            let itemPrice = document.getElementById("item_price").value;
+            let itemQuantity = document.getElementById("item_quantity").value;
+            
+            let url = "http://localhost:1234/itemlist"
+
+            let itemInfo = {
+                name:itemName,
+                price:itemPrice,
+                qty:itemQuantity
+            }
+
+            let postData = {
+                headers:{
+                    'Content-Type':"application/json"
+                },
+                method:"post",
+                body:JSON.stringify(itemInfo)
+            }
+
+            fetch(url, postData)
+            .then((res) => res.json())
+            .then((emptyres) =>{
+                alert("Item Data Saved Successfully...!")
+                window.location.href="api.html"
+            })
+            
+        }
+        </script>
+    </head>
+    <body>
+        <table cellpadding="20" align="center" bgcolor="gold">
+            <caption>
+                <h1>Enter Item Details</h1>
+            </caption>
+            <tr>
+                <th>Enter Item Name</th>
+                <td><input type="text" id="item_name"/></td>
+            </tr>
+            <tr>
+                <th>Enter Item Price</th>
+                <td>
+                    <input type="number" id="item_price"/> 
+                </td>
+            </tr>
+            <tr>
+                <th>Enter Item Quantity</th>
+                <td>
+                    <select  name="" id="item_quantity">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <th colspan="2">
+                    <button onclick="saveItem()">Save Item</button>
+                    <hr color="red" size="1"/ >
+                    <a href="api.html">Back To List</a>
+                </th>   
+            </tr>
+        </table>
+    </body>
+</html>
