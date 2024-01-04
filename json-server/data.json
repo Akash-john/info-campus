@@ -1,0 +1,134 @@
+<<<<<<< HEAD
+=======
+{
+  "booklist": [
+    {
+      "bookname": "asdf",
+      "author": "asdfasdf",
+      "id": 2
+    },
+    {
+      "bookname": "asdf",
+      "author": "asdfasd",
+      "id": 3
+    },
+    {
+      "bookname": "book name",
+      "author": "asdfasdf",
+      "id": 5
+    },
+    {
+      "bookname": "asdf",
+      "author": "asdfasdf",
+      "id": 6
+    },
+    {
+      "bookname": "asdfasd",
+      "author": "werwer",
+      "id": 7
+    },
+    {
+      "bookname": "werwer",
+      "author": "234234234",
+      "id": 8
+    },
+    {
+      "bookname": "wer",
+      "author": "asdfasdf",
+      "id": 9
+    }
+  ],
+  "emplist": [
+    {
+      "id": 1,
+      "empname": "John Doe",
+      "salary": 15000,
+      "city": "Bangalore",
+      "dept": "Software"
+    },
+    {
+      "id": 2,
+      "empname": "Marcus",
+      "salary": 15000,
+      "city": "Bangalore",
+      "dept": "Software"
+    },
+    {
+      "empname": "asdf",
+      "salary": "234234",
+      "city": "asdfasd",
+      "dept": "asdfas",
+      "id": 3
+    },
+    {
+      "empname": "asdf",
+      "salary": "234234",
+      "city": "asdfasd",
+      "dept": "asdfas",
+      "id": 4
+    },
+    {
+      "empname": "wer",
+      "salary": "2342",
+      "city": "asdfa",
+      "dept": "werwer",
+      "id": 5
+    },
+    {
+      "empname": "asdf",
+      "salary": "",
+      "city": "23423",
+      "dept": "23423",
+      "id": 6
+    },
+    {
+      "empname": "werwe",
+      "salary": "23423",
+      "city": "sadfas",
+      "dept": "w2ere",
+      "id": 7
+    },
+    {
+      "empname": "werw",
+      "salary": "234324",
+      "city": "asdfasd",
+      "dept": "234234",
+      "id": 8
+    },
+    {
+      "empname": "3242",
+      "salary": "",
+      "city": "23423",
+      "dept": "23423",
+      "id": 9
+    },
+    {
+      "empname": "wer",
+      "salary": "23423",
+      "city": "sdaf",
+      "dept": "werwer",
+      "id": 10
+    }
+  ],
+  "itemlist": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "price": 300,
+      "qty": 30
+    },
+    {
+      "name": "werwere",
+      "price": "",
+      "qty": "20",
+      "id": 2
+    },
+    {
+      "name": "wer",
+      "price": "2342",
+      "qty": "20",
+      "id": 3
+    }
+  ]
+}
+>>>>>>> javascript

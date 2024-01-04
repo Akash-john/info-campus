@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript API</title>
+        
+    <style>
+        
+        ul{
+            width: 300px;
+            margin: 40px;
+            display: inline-block;
+            padding: 30px;
+            box-shadow: 0px 0px 10px grey;
+            list-style-type: none;
+            vertical-align: top;
+        }
+
+         li{
+            
+            font-size: 22px;
+            color: blue;
+            line-height: 45px;
+            cursor:pointer;
+        }
+
+        #container{
+            width: 500px;
+            display: inline-block;
+            margin: 40px;
+            padding: 30px;
+            box-shadow: 0px 0px 10px grey;
+            min-height: 400px;
+            vertical-align: top;
+        }
+
+        #container p{
+            font-size: 25px;
+            color:rgb(187, 79, 1)
+        }
+
+        li:hover{
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+
+        <script>
+ 
+      
+            const delEmployee = (id) =>{
+                let url = "http://localhost:1234/emplist/"+id
+
+                let postData = {
+                    method:'delete'
+                }
+ 
+                fetch(url, postData)
+                .then((res)=> res.json())
+                .then((emptyRes)=>{
+                    getEmployeeList();
+                })
+            }
+
+            const empDetails = (empdetails) =>{
+              let data = "<h2>Employee Details</h2>"
+
+              data += "<p> Name:"+empdetails.empname + "</p>"
+              data += "<p> City:"+empdetails.city + "</p>"
+              data += "<p> Salary:"+empdetails.salary+ "</p>"
+              data += "<p> Department:"+empdetails.dept + "</p>"
+
+              document.getElementById("container").innerHTML = data;
+            }
+            const getEmployeeList = () =>{
+                fetch('http://localhost:1234/emplist')
+                .then((respose) => respose.json())
+                .then((empArray) => {
+                        empDetails(empArray[0]) //to display 1st employee details on page load
+                        let data = "<h1>Employee Details</h1>";
+                        empArray.map((emp, idx) =>{
+                            data = data + "<li onclick='empDetails("+ JSON.stringify(emp)+")'>" +  emp.empname + "</li>"
+                        })
+                       
+                        document.getElementById("emplist").innerHTML = data;
+                })
+            }
+
+  
+
+        </script>
+
+    </head>
+    <body onload="getEmployeeList()">
+        <header>
+            <ul id="emplist">
+                
+            </ul>
+
+            <section id="container">
+            
+            </section>
+        </header>
+
+      
+    </body>
+</html>
+
+    
