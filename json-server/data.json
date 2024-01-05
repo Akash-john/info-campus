@@ -1,40 +1,36 @@
 {
   "booklist": [
     {
-      "bookname": "asdf",
-      "author": "asdfasdf",
+      "bookname": "React Js",
+      "author": "Facebook",
+      "price" : 200,
       "id": 2
     },
     {
-      "bookname": "asdf",
-      "author": "asdfasd",
+      "bookname": "Angular",
+      "author": "Google",
+      "price" : 200,
       "id": 3
     },
     {
-      "bookname": "book name",
-      "author": "asdfasdf",
+      "bookname": "Javascript",
+      "author": "ECMA Script",
+      "price" : 3200,
       "id": 5
     },
     {
-      "bookname": "asdf",
-      "author": "asdfasdf",
+      "bookname": "Python",
+      "author": "pytutor",
+      "price" : 700,
       "id": 6
     },
     {
-      "bookname": "asdfasd",
-      "author": "werwer",
+      "bookname": "Avatar",
+      "author": "James Cameron",
+      "price" : 600,
       "id": 7
-    },
-    {
-      "bookname": "werwer",
-      "author": "234234234",
-      "id": 8
-    },
-    {
-      "bookname": "wer",
-      "author": "asdfasdf",
-      "id": 9
     }
+  
   ],
   "emplist": [
     {
@@ -110,22 +106,35 @@
   ],
   "itemlist": [
     {
-      "id": 1,
+      "id": 5,
       "name": "Apple",
       "price": 300,
       "qty": 30
     },
     {
-      "name": "werwere",
-      "price": "",
+      "name": "Mango",
+      "price": 200,
+      "qty": "20",
+      "id": 4
+    },
+    {
+      "name": "Banana",
+      "price": "120",
+      "qty": "20",
+      "id": 3
+    },
+
+    {
+      "name": "Beetroot",
+      "price": 200,
       "qty": "20",
       "id": 2
     },
     {
-      "name": "wer",
-      "price": "2342",
+      "name": "Carrot",
+      "price": 80,
       "qty": "20",
-      "id": 3
+      "id": 1
     }
   ]
 }

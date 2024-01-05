@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript API</title>
+        <style>
+          
+           ul{
+                width: 300px;
+                margin: 40px;
+                padding: 30px;
+                vertical-align: top;
+                display: inline-block;
+                box-shadow: 0px 0px 10px grey;
+                list-style-type: none;
+                min-height: 400px;
+                
+            }
+
+            #container{
+                width: 600px;
+                box-shadow: 0px 0px 10px grey;
+                min-height: 400px;
+                display:inline-block;
+                margin: 40px;
+                vertical-align: top;
+                padding: 30px;
+            }
+
+            #container h1{
+                text-align: center;
+                font-size: 40px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                text-decoration: underline;
+            }
+
+            #container p{
+               text-align: center;
+               font-size: 30px;
+               letter-spacing: 2px;
+               line-height: 30px;
+               color: rgb(38, 189, 43);
+            }
+
+            ul h1{
+                font-size: 50px;
+                text-align: center;
+              
+            }
+
+            li{
+                font-size: 30px;
+                color: blueviolet;
+                line-height: 40px;
+                cursor: pointer;
+                padding: 5px;
+            }
+
+            li:hover{
+                color: red;
+                text-decoration: underline;
+            }
+
+        </style>
+
+        <script>
+          
+          const bookDetails= (bookdetail) =>{
+            let data = "<h1>Book Details</h1>"
+                data = data + "<p> Book Name  : " +bookdetail.bookname+ "</p>"
+                data = data + "<p> Book Author  : " +bookdetail.author+ "</p>"
+                data = data + "<p> Book Price  : " +bookdetail.price+ "</p>"
+
+            document.getElementById('container').innerHTML = data;
+          } 
+
+          const getBookList = () =>{
+                fetch('http://localhost:1234/booklist')
+                .then((respose) => respose.json())
+                .then((bookArray) => {
+                        bookDetails(bookArray[0])
+                        let data = "<h1>Books</h1>";
+                        bookArray.map((book, idx) =>{
+                            console.log(book)
+                            data = data + "<li onmouseenter='bookDetails("+JSON.stringify(book)+")'>"  +  book.bookname   + "</li>";
+                        
+                        })
+                        document.getElementById("booklist").innerHTML = data;
+                })
+            }
+
+     
+
+   
+     
+
+        </script>
+
+    </head>
+    <body onload="getBookList()">
+        <header>
+            
+            <ul id="booklist">
+
+            </ul>
+
+            
+        <section id="container">
+            
+        </section>
+        </header>
+
+    </body>
+</html>
+
+    

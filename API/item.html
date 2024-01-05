@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript API</title>
+
+        <style>
+            ul{
+                margin: 40px;
+                width: 300px;
+                list-style-type: none;
+                padding: 30px;
+                box-shadow: 0px 0px 10px grey;
+                min-height: 400px;
+                display: inline-block;
+                vertical-align: top;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            
+            #container{
+                    margin: 40px;
+                    box-shadow: 0px 0px 10px grey;
+                    width: 500px;
+                    padding: 30px;
+                    display: inline-block;
+                    min-height: 400px;
+                    vertical-align: top;
+            }
+
+            #container h1{
+                text-align: center;
+                font-size: 40px;
+                text-decoration: underline;
+                letter-spacing: 2px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            #container p{
+                text-align: center;
+                font-size: 30px;
+                color:rgb(205, 65, 240);
+                letter-spacing: 2px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            ul h1{
+                text-align: center;
+                text-decoration: underline;
+                font-size: 40px;
+                
+            }
+
+            li{
+                padding: 5px;
+                font-size: 30px;
+                color: rgb(52, 125, 203);
+                line-height: 45px;
+                cursor: pointer;
+
+            }
+
+            li:hover{
+                text-decoration: underline;
+                color: red;
+            }
+
+
+
+        </style>
+
+        <script>
+            
+            const itemDetails=(itemdetail) =>{
+               let data = "<h1>Item Details </h1>"
+
+                data = data + "<p>Item Name  : " + itemdetail.name + "</p>"
+                data = data + "<p>Item Price  : " + itemdetail.price + "</p>"
+                data = data + "<p>Item Quantity  : " + itemdetail.qty + "</p>"
+                
+
+                
+               document.getElementById("container").innerHTML = data;
+            }
+            const getItemList = () =>{
+                fetch('http://localhost:1234/itemlist')
+                .then((respose) => respose.json())
+                .then((itemArray) => {
+                        itemDetails(itemArray[0])
+                        let data = "<h1>Items </h1>";
+                        itemArray.map((item, idx) =>{
+                                
+                            data = data + "<li onmouseenter='itemDetails("+JSON.stringify(item)+")'>"  +  item.name   + "</li>";
+                  
+                        })
+                        document.getElementById("itemlist").innerHTML = data;
+                })
+            }
+
+       
+
+        </script>
+
+    </head>
+    <body onload="getItemList()">
+        <header>
+            <ul id="itemlist">
+
+            </ul>
+            
+            <section id="container">
+            
+            </section>
+        </header>
+
+      
+    </body>
+</html>
+
+    
