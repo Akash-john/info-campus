@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+                h1{
+                    color: blue;
+                    font-size: 100px;
+                    text-align: center;
+                }
+
+                section{
+                    padding: 40px;
+                    background:darkcyan;
+                    display: grid;
+                    grid-template-columns: auto auto auto auto;
+                }
+
+                p{
+                    color:white;
+                    margin: 30px;
+                    font-size: 30px;
+                }
+
+                /*media query start (findout what is the current window size0) */
+
+                @media screen and (min-width:1px) and (max-width:600px) {
+                    h1{
+                        font-size: 40px;
+                    }
+                    section{
+                        grid-template-columns:auto;
+                        
+                    }
+
+                    p{
+                        font-size: 25px;
+                    }
+                }
+
+                /*for medium devices */
+                @media screen and (min-width:600px) and (max-width:900px) {
+                    h1{
+                        font-size: 50px;
+                    }
+
+                    section{
+                        grid-template-columns:auto auto;
+                        
+                    }
+
+                    p{
+                        font-size: 28px;
+                    }
+                }
+
+                /*for large devices */
+                @media screen and (min-width:900px) and (max-width:1200px){
+                    h1{
+                        font-size: 70px;
+                    }
+                }
+    </style>
+    </head>
+
+    <body>
+        <h1>Welcome to Media Query</h1>
+
+        <section>
+            <p>Website Design</p>
+            <p>Website Development</p>
+            <p>Digital Marketing</p>
+            <p>Logo Design</p>
+            <p>Portal Development</p>
+            <p>App Development</p>
+            <p>Software Development</p>
+            <p>Media Marketing</p>
+            <p>Employment</p>
+            <p>Education</p>
+            <p>Hire & Deploy</p>
+            <p>Payroll Management</p>
+        
+        
+        
+        
+        
+        </section>
+    </body>
+</html>

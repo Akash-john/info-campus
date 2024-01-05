@@ -217,3 +217,32 @@ as
             <p>Media Marketing</p>
             <p>Employment</p>
         </section>
+
+
+
+        =======================================================
+
+       Media Query: 
+                @media screen and (min-width:1px) and (max-width:600px) {
+                    h1{
+                        font-size: 40px;
+                    }
+                    section{
+                        grid-template-columns:auto;
+                        
+                    }
+
+                    p{
+                        font-size: 25px;
+                    }
+                }
+
+        =========================================================
+        Animation:
+
+                @keyframes "AnimationName"{
+
+                        ......
+                        ......
+                        
+                }

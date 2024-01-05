@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin:0px;     
+            }
+
+            @keyframes mybanner {
+                25%{
+                    background-image:url('2.jpeg');
+                    font-size: 40px;
+                }
+
+                50%{
+                    background-color: url('3.jpeg');
+                    font-size: 60px;
+                }
+
+                75%{
+                    background-color:url('4.jpeg');
+                    font-size:80px;
+                    
+                }
+            }
+
+            #banner{
+                height:300px;
+                background-image: url('1.avif');
+                background-size: 100% 100%;
+                color:white;
+                font-size: 100px;
+                text-align: center;
+                padding: 100px;
+                animation:mybanner;
+                animation-duration:5s;
+                animation-iteration-count: infinite;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section id="banner"> CSS3 Animation</section>
+    </body>
+</html>
