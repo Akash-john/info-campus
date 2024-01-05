@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            //owner
+            class Myuser {
+                    //this keyword  obj inside the class
+                constructor(){  //pre-defined method of Class 
+             
+                    this.mobile = 8056503693;
+                    this.email = 'akashsumi0007@gmail.com';
+                    this.address = "kammanhalli Bangalore"
+                }
+                //assets //methods
+                home = ()=>{
+                    let data = "<h1> Welcome Home </h1>"
+                    this.printdata(data)
+                }
+
+                about = () =>{
+                    let data = "<h1> About us </h1>"
+                    this.printdata(data)
+                }
+
+                contact = () =>{
+                    let data = "<h1> Contact Us </h1>";
+                        data += "<p>" + this.mobile + "</p>"
+                        data += "<p>" + this.email + "</p>"
+                        data += "<p>" + this.address + "</p>"
+                    this.printdata(data)
+                }
+
+                printdata = (data) =>{
+                    document.getElementById("container").innerHTML = data;
+                }
+                
+            }
+
+            const obj1 = new Myuser(); //new object inititation  or creation
+            
+            
+
+        </script>
+    </head>
+    <body>
+        <div align="center">
+            <button onclick="obj1.home()"> Home </button>
+            <button onclick="obj1.about()"> About Us</button>
+            <button onclick="obj1.contact()">Contact Us</button>
+        </div>
+
+        <section id="container">
+            No data...!
+        </section>
+            <p>
+                Class is in Javascript : The Class is collections of member variable
+                and member function
+            </p>
+            <p>
+                Member Variable: The Variables get defined under consturctor using this 
+                operator, that variable can be use inside the class as well as
+                outside of the class. to access memeber variable inside the class need to use "this"
+                keyword. and to access outside we need to use object of the class
+            </p>
+
+            <p>
+                Member Function : All the user defined function  of a class is called 
+                member function.
+            </p>
+
+            <p> Object of Class : The object is instance (or) copy of a class</p>
+            
+            <p>
+                What is "this" keyword ?
+                    --It is object of a class but it will work inside the class.
+            </p>
+
+            <p>
+                Constructor : life Cycle function of Javascript. it get call
+                automatically whenever class object get created.
+            </p>
+
+            <p>
+                extends : it use to inherit feature from 1 class to other(parent - child).
+            </p>
+
+        <script>
+        obj1.printdata("<h1>Welcome To Class Object</h1>");
+        </script>
+    </body>
+</html>

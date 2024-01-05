@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            body {
+                margin:30px 15% 30px;
+            }
+
+            h1{
+                font-size: 40px;
+                color:blue;
+            }
+
+            th{
+                color: red;
+            }
+
+            td{
+                color: blue;
+            }
+
+            table{
+                padding: 20px;
+                border:2px dashed blue;
+            }
+        </style>
+        <script>
+           
+        </script>
+    </head>
+
+    <body>
+        <h1>Add, List , Delete Using Class Object</h1>
+
+        <table align="left" cellpadding="10">
+            <tr>
+                <th>Item Name</th>
+                <td><input type="text" id="pname"/></td>
+            </tr>
+
+            <tr>
+                <th>Item Price</th>
+                <td><input type="text" id="pprice"/></td>
+            </tr>
+
+            <tr>
+                <th>Item Quantity</th>
+                <td><input type="text" id="pqty"/></td>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+                    <button>Save</button>
+                </th>
+            </tr>
+        </table>
+
+
+        <table align="right" cellpadding="15">
+
+            <thead>
+                <tr>
+                    <th>Sl NO</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>Item Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            
+            <tbody id="container">
+
+
+            </tbody>
+        </table>
+    </body>
+</html>
