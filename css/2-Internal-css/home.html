@@ -32,10 +32,139 @@
                 animation-duration:5s;
                 animation-iteration-count: infinite;
             }
+
+            body{
+                margin:0px;
+            }
+
+            ul{
+                margin:0px;
+                background-color: darkblue;
+                text-align: center;
+                top: 0px;
+                position: sticky;
+    
+
+            }
+
+            ul li{
+                display: inline-block;
+                padding: 10px 40px 10px;
+                color: white;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                
+            }
+
+            ul li:hover{
+                cursor: pointer;
+                background-color: red;
+            }
+
+            #container{
+                width: 80%;
+                margin: auto;
+                min-height: 450px;
+            }
+
+            h1{
+                color:orangered;
+                font-size: 60px;
+                text-align: center;
+            }
+
+            footer{
+                min-height: 120px;
+                text-align: center;
+                font-size: 20px;
+                padding: 25px 10% 25px;
+                background:rgb(43, 35, 90);
+                color:white;
+        
+            }
+
+            footer p{
+                display: inline-block;
+                width: 45%;
+                vertical-align: top;
+                margin: 50px 2% 50px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            }
+
+            div{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            footer a{
+                margin-left: 30px;
+                color:yellow;
+                text-decoration:none;
+                font-size:20px;
+                font-style: italic;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+             
+            }
+
+            footer a:hover{
+                color: red;
+            }
+
+            marquee{
+                padding: 5px 10px 5px;
+
+            }
+
+            footer div{
+                color: yellow;
+            }
+            
+            #ourproduct img{
+                width: 20%;
+                height: 200px;
+                margin: 2%;
+                box-shadow: 15px 25px 10px gray;
+            }
+            p{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                letter-spacing: 2px;
+                line-height: 20px;
+                font-weight: 500;
+            }
+
+            @media screen and (min-width:0px) and (max-width:650px){
+                footer  p{
+                    display: block;
+                    width: 100%;
+                }
+
+                #ourproduct img{
+                    display: block;
+                    width: 95%;
+                }
+                h1{
+                    font-size: 30px;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    text-decoration: underline;
+                    letter-spacing: 2px;
+                }
+
+                #banner{
+                    height: 100px;
+                }
+
+                ul li{
+                    padding: 5px;
+                    font-size: 14px;
+                }
+            }
         </style>
     </head>
 
     <body>
+
+        <marquee direction="right" scrollamount="20"> 
+            Help Center 8056503693 /8478787873/7423423422
+        </marquee>
         <ul>
             <li>Home</li>
             <li>About us</li>
@@ -46,10 +175,48 @@
         </ul>
 
         <section id="banner"></section>
-        <section id="container"></section>
+
+
+        <section id="container">
+            <h1>Trade Cafe Bangalore</h1>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Sunt corrupti sint ratione eveniet nesciunt maiores
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nobis eum dicta necessitatibus itaque, at dolores minima et, ex deleniti aliquam accusantium iusto laboriosam impedit? Nihil libero deleniti facilis voluptates. reiciendis reprehenderit deleniti. Minus saepe excepturi exercitationem beatae dignissimos hic aliquam animi perferendis veniam ab.</p>
+            
+                 <div id="ourproduct">
+                    <img src="1.avif"/>
+                    <img src="2.jpeg"/>
+                    <img src="3.jpeg"/>
+                    <img src="4.jpeg"/>
+                 </div>
+                 
+                 <br/>
+                 
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Sunt corrupti sint ratione eveniet nesciunt maiores
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nobis eum dicta necessitatibus itaque, at dolores minima et, ex deleniti aliquam accusantium iusto laboriosam impedit? Nihil libero deleniti facilis voluptates. reiciendis reprehenderit deleniti. Minus saepe excepturi exercitationem beatae dignissimos hic aliquam animi perferendis veniam ab.</p>
+           
+          
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Sunt corrupti sint ratione eveniet nesciunt maiores
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nobis eum dicta necessitatibus itaque, at dolores minima et, ex deleniti aliquam accusantium iusto laboriosam impedit? Nihil libero deleniti facilis voluptates. reiciendis reprehenderit deleniti. Minus saepe excepturi exercitationem beatae dignissimos hic aliquam animi perferendis veniam ab.</p>
+               
+              
+        </section>
 
         <footer>
-            Footer...
-        </footer>
-    </body>
+          <div>@copyrights For Your Company Name. All Rights Reserved</div>
+        
+            <p>About Your Company. Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tempora dicta autem mollitia cum veritatis, ducimus neque modi eius ipsa ad dolor iusto nemo architecto, sint odio ratione, ea ut.sit amet consectetur a</p>
+            
+           
+         <p>Trade Cafe Bangalore. #123, Xyz Floor, Outer Ring Road Bangalore 560037</p>
+            
+        <a href="">Terms of Use</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Help Center</a>
+        <a href="">Become Investor</a>
+
+        </body>
 </html>
