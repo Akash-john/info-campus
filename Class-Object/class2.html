@@ -26,12 +26,113 @@
             }
         </style>
         <script>
-           
+           class DataStock{
+                constructor(){
+                  this.allData =  [{
+                        itemname:"Apple",
+                        cost:300,
+                        qty:10
+                    },
+                    {
+                        itemname:"Mango",
+                        cost:400,
+                        qty:11
+                    },
+                    {
+                        itemname:"Banana",
+                        cost:200,
+                        qty:15
+                    }, //this keyword is used...
+                
+                ]
+                }
+           }
+
+           class Myitem extends DataStock{
+                constructor(){
+                    super();//calling constructor from Parent class
+                }
+               
+               
+                getitem = () => {
+                    let data = "";
+                    this.allData.map((item, index) =>{
+                        data = data + "<tr>"
+                        data = data + "<td>" + index + "</td>";
+                        data = data + "<td>" + item.itemname + "</td>";
+                        data = data + "<td>" + item.cost + "</td>";
+                        data = data + "<td>" + item.qty + "</td>";
+                        data = data + "<td><button onclick='obj2.editItem("+index+")'>edit</button></td>"
+                        data = data + "<td><button onclick='obj2.deleteItem("+index+")'>delete</button></td>";
+                        data = data + "</tr>"
+                    })
+                    document.getElementById("container").innerHTML = data;
+                }
+
+                save = () =>{
+                    let itemName = document.getElementById("pname").value;
+                    let itemPrice = document.getElementById("pprice").value;
+                    let itemQuantity = document.getElementById('pqty').value;
+
+
+                    //validation 
+                    if(itemName=="" || itemPrice == "" || itemQuantity ==""){
+                        alert("Invalid Input")
+                    }else{
+                        let newItem = {
+                        itemname:itemName,
+                        cost:itemPrice,
+                        qty:itemQuantity
+                    }
+
+
+
+                    this.allData =  this.allData.concat(newItem)
+                    
+
+                    this.getitem(); //reload the list
+
+                    //To clear the text fields...
+                    document.getElementById("pname").value = "";
+                    document.getElementById("pprice").value = "";
+                    document.getElementById("pqty").value = "";
+
+                    }
+                    
+    
+                }
+
+                deleteItem = (index) =>{
+                    let status = confirm("Are you sure ?")
+                    if( status === true){
+                        this.allData.splice(index,1)
+                        this.getitem() //reload the list...
+                    }else{
+                        alert("Data could not be deleted...!")
+                    }
+                    
+                }
+
+                editItem = (id) =>{
+                    const item = this.allData[id];
+                    document.getElementById("pname").value = item.itemname;
+                    document.getElementById("pprice").value = item.cost;
+                    document.getElementById('pqty').value = item.qty
+
+            
+                }
+
+               
+           }
+
+           const obj2 = new Myitem(); //creating object...
+
         </script>
     </head>
 
-    <body>
+    <body onload="obj2.getitem()">
         <h1>Add, List , Delete Using Class Object</h1>
+        
 
         <table align="left" cellpadding="10">
             <tr>
@@ -51,7 +152,7 @@
 
             <tr>
                 <th colspan="2">
-                    <button>Save</button>
+                    <button onclick="obj2.save()">Save</button>
                 </th>
             </tr>
         </table>
