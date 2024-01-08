@@ -233,4 +233,62 @@ legend{
    
     }
 
+
+
+}
+
+
+
+
+/*media query for 800 to 1100px */
+
+@media screen and (min-width:800px) and (max-width:1100px){
+    ul li{
+      
+  
+        padding: 10px 15px 10px;
+
+        
+    }
+
+    ul {
+        margin: 0px;
+        background:darkblue;
+        text-align: center;
+    }
+
+    ul li a{
+        font-size:18px;
+        color: white;
+    }
+
+    #banner{
+        height: 350px;
+    }
+
+    h1{
+        font-size: 55px;
+    }
+
+   #container img{
+        width: 45%;
+        margin-bottom: 30px;
+    }
+
+    #container .address{
+        display: inline-block;
+        width: 34%;
+    }
+
+    #left-nav{
+ 
+        text-align: left;
+        font-size: 17px;
+    }
+    #left-nav li{
+        padding: 8px 10px 8px;
+        font-size: 15px;
+   
+    }
+
 }
