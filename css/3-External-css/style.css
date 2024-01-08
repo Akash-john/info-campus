@@ -1,0 +1,114 @@
+body{
+    margin:0px;
+}
+
+ul {
+    margin: 0px;
+    background:darkblue;
+    text-align: center;
+    top:0px;
+    position: sticky;
+}
+
+ul li{
+    padding: 15px 40px 15px;
+    display: inline-block;
+   
+
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+#help-center{
+    color:red;
+    font-weight: bold;
+}
+
+
+ul li:hover{
+    cursor: pointer;
+    background-color: rgb(228, 139, 37);
+}
+
+h1{
+    color:rgb(254, 23, 23);
+    font-size:70px;
+    text-align: center;
+}
+
+@keyframes mybanner{
+    25%{
+        background: url(1.avif);
+        background-size: 100% 100%;
+    }
+
+    50%{
+        background: url(2.jpeg);
+        background-size: 100% 100%;
+    }
+    75%{
+        background: url(3.jpeg);
+        background-size: 100% 100%;
+    }
+}
+
+#banner{
+    height: 400px;
+    background: url(1.avif);
+    background-size: 100% 100%;
+    animation: mybanner;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+#container{
+    width: 80%;
+    margin: auto;
+    min-height: 450px;
+}
+
+.mypic{
+    margin: 2%;
+    width: 20.5%;
+    height: 250px;
+    box-shadow: 10px 20px 10px rgb(162, 164, 165);
+}
+
+
+footer{
+    background: darkblue;
+    color: white;
+    padding: 35px;
+    text-align: center;
+    min-height: 30px;
+    font-size: 20px;
+    border-top:10px solid yellow
+}
+
+#twocols{
+    column-count: 2;
+    text-align: justify;
+}
+
+.address{
+    margin: 4%;
+    width: 30%;
+    display: inline-block;
+    padding: 20px;
+    border: 10px solid grey;
+}
+
+legend{
+    background: purple;
+    color: white;
+    font-size: 20px;
+    padding: 7px 30px 7px;
+}
