@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .header{
+                text-align: center;
+                font-size: 30px;
+                letter-spacing: 2px;
+                padding: 10px 40px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 400;
+            }
+
+            .main-container{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: 10px;
+                padding: 20px;
+                text-align: center;
+               
+            }
+
+            .left-container{
+                border: 1px solid gray;
+                width: 30%;
+                min-height: 400px;
+                border-radius: 25px;
+                box-shadow: 0px -10px   10px blue;
+                border: 1px solid blue;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                
+            }
+
+            .right-container{
+                border: 1px solid gray;
+                width: 30%;
+                min-height: 400px;
+                border-radius: 25px;
+                box-shadow: 0px -10px   10px rgb(127, 220, 127);
+                border: 1px solid palegreen;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .para-text{
+                text-align: center;
+                font-size: 20px;
+                padding: 10px 40px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 400;
+                color: rgb(148, 148, 148);
+            }
+
+            .title{
+                font-weight: 400;
+                font-size: 25px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+             .para{
+                font-size: 20px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: grey;
+            }
+
+            button{
+                width: 50%;
+                padding: 10px 20px;
+                color: whitesmoke;
+                border: none;
+                background: blue;
+                border-radius: 25px;
+            }
+            
+            .contact-btn{
+                background: rgb(111, 217, 111);
+            }
+
+            .last-line{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color:blue;
+            }
+
+            .last-line-2{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color:palegreen;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <header>
+            <h1 class="header">Contact Us</h1>
+            <hr color="gainsboro"/>
+        </header>
+        <p class="para-text">Have any questions? We'd love hear from you</p>
+        <section class="main-container">
+                <div class="left-container">
+                    <h3 class="title">Customer Care</h3>
+                    <p class="para">Our support team is spread all over the world to give you fast response</p>
+                    <button class="submit-btn">Submit a Request</button>
+                    <h3 class="last-line">Frequently Asked Questions</h3>
+                </div>
+
+                <div class="right-container">
+                    <h3 class="title">Customer Care</h3>
+                    <p class="para">Our support team is spread all over the world to give you fast response</p>
+                    <button class="contact-btn">Contact Sales</button>
+                    <h3 class="last-line-2">View Plans</h3>
+                </div>
+        </section>
+       
+    </body>
+
+</html>
