@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0%;
+        }
+        .first-container{
+            display: inline-block;
+            width: 20%;
+            height: 100vh;
+            background-color: darkslategrey;
+            padding: 10px;
+        }
+        
+        .first-container-data{
+            border: 1px solid gray;
+            margin-top:100%;
+            text-align: right;
+            font-family: sans-serif;
+            line-height: 40px;
+            width: 250px;
+            border-radius: 25px ;
+            letter-spacing: 1.5px;
+            margin-left: 120px;
+            padding: 15px;
+        }
+        .first-container-data h1{
+            color: rgb(230, 232, 232);
+            padding: 2px;
+            margin: 0;
+        
+        }
+
+        .pinned-post{
+            font-family: sans-serif;
+            padding: 4px 10px 4px;
+            font-size: 20px;
+            color: gainsboro;
+        }
+
+        h4{
+            color:gainsboro ;
+            font-weight: 100;
+            margin: 0;
+            font-style: normal;
+            font-size: 20px;
+        }
+
+        button{
+            border:none;
+            color:white;
+            background-color: blueviolet;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .second-container{
+            display: inline-block;
+            margin-left: 30px;
+            vertical-align: top;
+            width: 76%;
+        }
+
+        .title-2{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 4px 10px 4px;
+            font-size: 40px;
+            color: rgb(0, 0, 0);
+            margin-right:38%;
+        }
+
+        .title-1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 4px 10px 4px;
+            font-size: 40px;
+            color: rgb(0, 0, 0);
+            margin-right:70%;
+        }
+
+        #container-1{
+           display: flex;
+           justify-content:space-around;
+           align-items: center;
+    
+        }
+
+       
+      
+        #container-1 img{
+            border-radius: 50px;
+        }
+
+        .para-text{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: left;
+            margin:-20px 0px 0px 25px ;
+            font-weight: 400;
+            color: rgb(179, 179, 179);
+            font-size: 20px;
+
+        }
+
+        .para-text .name{
+            color: rgb(31, 180, 203);
+            font-weight: 500;
+        }
+
+        .info-1{
+            color: white;
+            background: green;
+            font-weight: 20px;
+            padding: 0px 10px;
+        }
+
+        .info-2{
+            color: white;
+            background: blue;
+            font-weight: 20px;
+            padding: 0px 10px;
+        }
+
+        .para-text-2{
+            padding: 20px;
+            width: 100%;
+            font-size: 25px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 45px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="first-container">
+        <div class="first-container-data">
+            <h1>
+                A SAMPLE<br/>
+                 BLOG
+            </h1>
+            <h4>
+                Creating a blog layout using pure
+            </h4>
+    
+            <button>PURE</button>
+            <button>YUI LIBRARY</button>
+        </div>
+
+    </section>
+    
+    <section class="second-container">
+        <h1 class="pinned-post">PINNED POST</h1>
+        <hr size="0.5" color="gainsboro"/>
+        <div>
+            <div id="container-1">
+                <h1  class="title-1">Introducing Pure</h1>
+                
+                <img src="img/1.webp" width="80px" height="80px"/>
+                
+            </div>
+            <p class="para-text">By <span class="name">Tilo Mitra</span> under <span class="info-1">CSS</span> <span class="info-2">Pure</span></p>
+            <p class="para-text-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus delectus culpa quisquam repudiandae numquam facilis porro itaque dignissimos excepturi tempore, adipisci ipsam dolores aspernatur deserunt, labore, explicabo corrupti ad placeat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem placeat praesentium voluptas quidem deserunt animi, consequuntur est iste architecto ipsum quia totam, alias, minus assumenda. Quae placeat illum omnis. Error.
+            </p>
+        </div>
+
+        <h1 class="pinned-post">RECENT POST</h1>
+        <hr size="0.5" color="gainsboro"/>
+        <div>
+            <div id="container-1">
+                <h1  class="title-2">Everything You Need To Know About Grunt</h1>
+                <img src="img/1.webp" width="80px" height="80px"/>
+            </div>
+
+            <p class="para-text">By <span class="name">Tilo Mitra</span> under <span class="info-1">CSS</span> <span class="info-2">Pure</span></p>
+            <p class="para-text-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus delectus culpa quisquam repudiandae numquam facilis porro itaque dignissimos excepturi tempore, adipisci ipsam dolores aspernatur deserunt, labore, explicabo corrupti ad placeat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem placeat praesentium voluptas quidem deserunt animi, consequuntur est iste architecto ipsum quia totam, alias, minus assumenda. Quae placeat illum omnis. Error.
+            </p>
+        </div>
+    </section>
+    
+</body>
+</html>
