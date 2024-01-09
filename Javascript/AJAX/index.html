@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="dist/dist/css/bootstrap.css">
+    <script>
+        const getHome = () =>{
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("ajaxdata").innerHTML = this.responseText;
+                    }
+                };
+            xmlhttp.open("GET","home.html");
+            xmlhttp.send();
+        }
+
+        const getAbout = () =>{
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("ajaxdata").innerHTML = this.responseText;
+                    }
+                };
+            xmlhttp.open("GET","about.html");
+            xmlhttp.send();
+        }
+
+        const getGallery = () =>{
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("ajaxdata").innerHTML = this.responseText;
+                    }
+                };
+            xmlhttp.open("GET","gallery.html");
+            xmlhttp.send();
+        }
+
+        const getFile=(fileName) =>{
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("ajaxdata").innerHTML = this.responseText;
+                    }
+                };
+            xmlhttp.open("GET","gallery.html");
+            xmlhttp.send();
+        }
+
+    </script>
+    <title>Document</title>
+</head>
+<body onload="getHome()">
+    <div class="container mt-4">
+            <div class="row mb-5">   
+                <div class="col-lg-4 text-danger">
+                    <h1>AJAX</h1>
+                </div>
+
+                <div class="col-lg-8 text-end">
+                    <div class="btn-group">
+                            <button class="btn btn-primary" onclick="getHome()">Home</button>
+                            <button class="btn btn-info" onclick="getAbout()">About Us</button>
+                            <button class="btn btn-success" onclick="getGallery()">My Gallery</button>
+                            <button class="btn btn-warning">Product</button>
+                            <button class="btn btn-danger">Services</button>
+                    </div>
+                </div>
+            </div>   <!--row end-->
+
+            <div class="row">
+                <div class="col-lg-3"> 
+                    <ul class="list-group">
+                        <li class="list-group-item active">Navigation</li>
+                        <li class="list-group-item" onclick="getFile('website.html')">Website Development</li>
+                        <li class="list-group-item"onclick="getFile('marketing.html')">Digital Marketing</li>
+                        <li class="list-group-item"onclick="getFile('mobile.html')">Mobile App</li>
+                        <li class="list-group-item"onclick="getFile('content.html')">Content Writing</li>       
+                    </ul>
+
+                    <div class="p-4 shadow-lg mt-5">
+                        <h4>Office Address</h4>
+
+                        <p>
+                            #123, infocampus, 2nd Floor, Outer Ring Road, Marathalli Bangalore 560037
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-9" id="ajaxdata"> 
+                    <h2 class="text-center">Please Wait Loading...</h2>
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>
