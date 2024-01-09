@@ -1,0 +1,118 @@
+
+
+Bootstrap is library of css.
+
+=>It has collections of css classes.
+the bootstarp use to design responsive webpage.
+According to bootstrap, total devices are 6 types based on screen width.
+
+
+        1.extra small - 0px to 576px
+        2.small device - 576px to 768px
+        3.medium device - 768px to 992px
+        4.large device  - 992px to 1200px
+        5.extra large device - 1200px to 1400px
+        6.extra extra large device - 1400px
+-------------------------------------------------------------
+
+The bootstrap has pre-defined 12 css column classes for each category.
+        
+        1. extra small device - 0px to 576px
+            .col-1
+            .col-2
+            .col-3
+            .col-4
+            .col-5
+            .col-6
+            .col-7
+            .col-8
+            .col-9
+            .col-10
+            .col-11 
+            .col-12
+
+        2. small device - 576px to 768px
+            .col-sm-1
+            .col-sm-2
+            .col-sm-3
+            .col-sm-4
+            .col-sm-5
+            .col-sm-6
+            .col-sm-7
+            .col-sm-8
+            .col-sm-9
+            .col-sm-10
+            .col-sm-11
+            .col-sm-12
+
+        3. medium device - 768px to 992px
+            .col-md-1
+            .col-md-2
+            .col-md-3
+            .col-md-4
+            .col-md-5
+            .col-md-6
+            .col-md-7
+            .col-md-8
+            .col-md-9
+            .col-md-10
+            .col-md-11
+            .col-md-12
+
+        4. large device - 992px to 1200px
+            .col-lg-1
+            .col-lg-2
+            .col-lg-3
+            .col-lg-4
+            .col-lg-5
+            .col-lg-6
+            .col-lg-7
+            .col-lg-8
+            .col-lg-9
+            .col-lg-10
+            .col-lg-11
+            .col-lg-12
+
+        5. extra large device - 1200px to 1400px
+
+            .col-xl-1
+            .col-xl-2
+            .col-xl-3
+            .col-xl-4
+            .col-xl-5
+            .col-xl-6
+            .col-xl-7
+            .col-xl-8
+            .col-xl-9
+            .col-xl-10
+            .col-xl-11
+            .col-xl-12
+
+        6. extra extra large device > 1400px
+            .col-xxl-1
+            .col-xxl-2
+            .col-xxl-3
+            .col-xxl-4
+            .col-xxl-5
+            .col-xxl-6
+            .col-xxl-7
+            .col-xxl-8
+            .col-xxl-9
+            .col-xxl-10
+            .col-xxl-11
+            .col-xxl-12
+
+
+===================Total 72 classes =====================
+
+        To create a page using bootstrap, follow these steps.
+         1. link to bootstarp.css file in head section.
+         2. follow body tag.
+         3. use following classes after body tag.
+                .container - it cover 80% width and has some gap in left and right.
+                .container-fluid - it cover 100% width.
+         4. inside container or container fluid. follow the classes
+                .row - height is auto width 100%
+         5. inside the row class, follow the columns
+            => each row min 1 column and max 12 columns.
+============================================================
