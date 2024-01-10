@@ -4,15 +4,26 @@
 
     <link rel="stylesheet" href="dist/dist/css/bootstrap.css">
     <script>
+
+        //old version to write AsyncJavascript
         const getHome = () =>{
-            var xmlhttp = new XMLHttpRequest();
+            var xmlhttp = new XMLHttpRequest(); //it creates a object of XMLHttpRequest() used to interact with servers.
+            xmlhttp.open("GET","home.html");//it generate a url on get method
+            xmlhttp.send(); //it send the request to above generated url
+
+
+            //response will come from their
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("ajaxdata").innerHTML = this.responseText;
                     }
                 };
-            xmlhttp.open("GET","home.html");
-            xmlhttp.send();
+                
+            
+            
+            //this.readyState == 4 => request is sent from user computer
+            //this.status == 200 => request is received by server
+            //this.responseText => capture the response.
         }
 
         const getAbout = () =>{
@@ -44,10 +55,47 @@
                 document.getElementById("ajaxdata").innerHTML = this.responseText;
                     }
                 };
-            xmlhttp.open("GET","gallery.html");
+            xmlhttp.open("GET",fileName);
             xmlhttp.send();
         }
 
+        const getProduct = () => {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+
+                        let allProduct = JSON.parse(this.responseText);
+                        let data = "<div class ='row'>"
+                             allProduct.map((product, index) =>{
+                                data = data + "<h4 class='col-lg-4 mb-4'>" + product + "</h4>"
+                             })
+                            data = data + "</div>"
+                         document.getElementById("ajaxdata").innerHTML = data;
+                    }
+                };
+            xmlhttp.open("GET","product.json");
+            xmlhttp.send();
+        }
+
+        const getService = () =>{
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+
+                        let allProduct = JSON.parse(this.responseText);
+                        let data = "<div class ='row'>"
+                             allProduct.map((product, index) =>{
+                                data = data + "<div class='col-lg-6'>";
+                                data = data + "<h4 class=' mb-4 border p-5 text-center'>" + product + "</h4>"
+                                data = data + "</div>"
+                             })
+                            data = data + "</div>"
+                         document.getElementById("ajaxdata").innerHTML = data;
+                    }
+                };
+            xmlhttp.open("GET","service.json");
+            xmlhttp.send();
+        }
     </script>
     <title>Document</title>
 </head>
@@ -63,8 +111,8 @@
                             <button class="btn btn-primary" onclick="getHome()">Home</button>
                             <button class="btn btn-info" onclick="getAbout()">About Us</button>
                             <button class="btn btn-success" onclick="getGallery()">My Gallery</button>
-                            <button class="btn btn-warning">Product</button>
-                            <button class="btn btn-danger">Services</button>
+                            <button class="btn btn-warning" onclick="getProduct()">Product</button>
+                            <button class="btn btn-danger" onclick="getService()">Services</button>
                     </div>
                 </div>
             </div>   <!--row end-->
@@ -75,7 +123,7 @@
                         <li class="list-group-item active">Navigation</li>
                         <li class="list-group-item" onclick="getFile('website.html')">Website Development</li>
                         <li class="list-group-item"onclick="getFile('marketing.html')">Digital Marketing</li>
-                        <li class="list-group-item"onclick="getFile('mobile.html')">Mobile App</li>
+                        <li class="list-group-item"onclick="getFile('moblie.html')">Mobile App</li>
                         <li class="list-group-item"onclick="getFile('content.html')">Content Writing</li>       
                     </ul>
 
